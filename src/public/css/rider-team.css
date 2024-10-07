@@ -1,0 +1,898 @@
+@media (min-width: 40em) {
+  .rider-header {
+    gap: 5rem;
+  }
+}
+.rider-header {
+  display: flex;
+  flex-flow: row nowrap;
+  position: relative;
+  width: 100%;
+  background: #000;
+  background-image: radial-gradient(
+    96.8% 493.26% at 100% 93.41%,
+    rgba(254, 11, 7, 0.219) 0,
+    rgba(148, 4, 1, 0) 100%
+  );
+}
+.rider-header__header {
+  max-width: calc(100% - 5.6rem);
+}
+
+@media (min-width: 52.5em) {
+  .rider-header .page-header {
+    padding: 1.6rem 4.8rem 5rem;
+  }
+}
+.rider-header__header .page-header {
+  background: transparent;
+
+  background-image: none;
+}
+.page-header {
+  z-index: 200;
+  width: 100%;
+  position: relative;
+}
+
+.page-header__container {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  color: #fff;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  position: relative;
+}
+
+@media (min-width: 64.0625em) {
+  .page-header__title {
+    font-size: 5.2rem;
+    line-height: 4.8rem;
+  }
+}
+.page-header__title {
+  letter-spacing: -0.02em;
+}
+
+@media (min-width: 40em) {
+  .rider-header__search {
+    width: auto;
+    z-index: 300;
+  }
+}
+.rider-header__search {
+  position: absolute;
+  right: 0;
+  height: 100%;
+}
+
+@media (min-width: 52.5em) {
+  .rider-search {
+    margin: 2.2rem 4.8rem 5rem;
+  }
+}
+@media (min-width: 40em) {
+  .rider-search {
+    width: 40rem;
+  }
+}
+.rider-search {
+  position: relative;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+}
+
+@media (min-width: 52.5em) {
+  .rider-search__button {
+    top: 50%;
+    transform: translateY(-50%);
+    outline: none;
+  }
+}
+.rider-search__button {
+  position: absolute;
+  right: 0;
+  width: 2.4rem;
+  height: 2.4rem;
+  margin: 0 1.6rem 0.6rem 0;
+  background-image: url(https://www.motogp.com/resources/v7.7.1/i/svg-files/elements/search.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+@media (min-width: 52.5em) {
+  .rider-grid__container {
+    padding: 5.8rem 4.8rem;
+    background-color: #f9f9f9;
+  }
+}
+
+.rider-grid__menu-container {
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 0.8rem;
+}
+
+.rider-grid__menu-item.active-rider-btn {
+  background-color: #c80502;
+  color: #fff;
+  border: none;
+}
+.rider-grid__menu-item {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+
+  padding: 1rem 1.6rem;
+  border-radius: 1.8rem;
+  border: 0.1rem solid #ebebeb;
+}
+
+.rider-grid__supplier {
+  margin-top: 2.4rem;
+  min-height: 3.8rem;
+}
+
+.rider-grid__supplier ~ div .rider-list__container {
+  padding: 0;
+}
+@media (min-width: 64.0625em) {
+  .rider-list__container {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+.rider-list__container {
+  display: grid;
+  position: relative;
+  gap: 0.8rem;
+}
+
+@media (min-width: 52.5em) {
+  .rider-grid__title::before {
+    width: 2.1rem;
+    height: 2.6rem;
+  }
+}
+.rider-grid__title::before {
+  display: flex;
+  position: relative;
+  content: "";
+  background-image: url(https://www.motogp.com/resources/v7.7.1/i/svg-files/elements/widget-header.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.rider-list__career-type {
+  margin-top: 3.2rem;
+  grid-column: 1/-1;
+}
+@media (min-width: 52.5em) {
+  .rider-grid__title {
+    font-size: 3.7rem;
+    gap: 0.6rem;
+    margin-bottom: 3.2rem;
+  }
+}
+.rider-grid__title {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  line-height: 2.7rem;
+  font-weight: bold;
+  letter-spacing: -0.02em;
+  color: #000;
+  display: flex;
+  align-items: baseline;
+  width: 100%;
+  text-transform: capitalize;
+}
+
+@media (min-width: 52.5em) {
+  .rider-list__rider {
+    height: 42rem;
+  }
+}
+.rider-list__rider {
+  position: relative;
+  display: flex;
+  border-radius: 0.4rem;
+  background-color: #171c21;
+  justify-content: space-between;
+  text-decoration: none;
+  overflow: hidden;
+}
+
+.rider-list__background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 0.4rem;
+}
+.rider-list__background {
+  min-height: 14.2rem;
+  background-color: #171c21;
+}
+
+.rider-list__background-team-colour {
+  left: 0;
+  top: 0;
+  transition: background-color 0.5s ease-in-out;
+  opacity: 0.32;
+}
+.rider-list__background-team-colour {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 0.4rem;
+}
+
+/* mau cho cac team */
+.aruba {
+  background-color: rgb(20, 116, 189);
+}
+.aprilia {
+  background-color: rgb(92, 179, 58);
+}
+.axxis {
+  background-color: rgb(181, 249, 13);
+}
+.boe {
+  background-color: rgb(209, 255, 24);
+}
+.cfmoto {
+  background-color: rgb(0, 121, 132);
+}
+.cip {
+  background-color: rgb(119, 210, 92);
+}
+.ducati {
+  background-color: rgb(204, 0, 0);
+}
+.dynavolt {
+  background-color: rgb(52, 73, 102);
+}
+.elf {
+  background-color: rgb(104, 42, 56);
+}
+.honda {
+  background-color: rgb(245, 245, 245);
+}
+.fantic {
+  background-color: rgb(228, 3, 44);
+}
+.felo {
+  background-color: rgb(249, 255, 0);
+}
+.gresini {
+  background-color: rgb(157, 180, 217);
+}
+.gasgas {
+  background-color: rgb(153, 7, 38);
+}
+.italtrans {
+  background-color: rgb(16, 107, 169);
+}
+.klint {
+  background-color: rgb(123, 220, 181);
+}
+.kopron {
+  background-color: rgb(255, 224, 0);
+}
+.liqui {
+  background-color: rgb(52, 73, 102);
+}
+.leopard {
+  background-color: rgb(117, 203, 209);
+}
+.lcr-e {
+  background-color: rgb(232, 70, 44);
+}
+.mlav {
+  background-color: rgb(0, 161, 156);
+}
+.monster {
+  background-color: rgb(12, 54, 140);
+}
+.mt {
+  background-color: rgb(235, 147, 84);
+}
+.mta {
+  background-color: rgb(254, 26, 139);
+}
+.onlyfans {
+  background-color: rgb(10, 40, 163);
+}
+.ongetta {
+  background-color: rgb(2, 150, 88);
+}
+.openBank {
+  background-color: rgb(18, 57, 181);
+}
+.pertamina {
+  background-color: rgb(219, 255, 3);
+}
+.prima {
+  background-color: rgb(130, 52, 194);
+}
+.preicanos {
+  background-color: rgb(170, 239, 0);
+}
+.qjmotor {
+  background-color: rgb(157, 180, 217);
+}
+.red-bull {
+  background-color: rgb(255, 102, 0);
+}
+.repsol {
+  background-color: rgb(255, 160, 15);
+}
+.rw {
+  background-color: rgb(245, 245, 245);
+}
+.speed {
+  background-color: rgb(240, 128, 25);
+}
+.sic58 {
+  background-color: rgb(228, 35, 39);
+}
+.trackhouse {
+  background-color: rgb(0, 102, 204);
+}
+.tech3 {
+  background-color: rgb(169, 34, 22);
+}
+.yamaha {
+  background-color: rgb(224, 255, 0);
+}
+.castrol,
+.idemitsu,
+.hrc,
+.lcr {
+  background-color: rgb(250, 250, 250);
+}
+
+@media (min-width: 52.5em) {
+  .rider-list__background-name {
+    left: 50%;
+    transform: translate(-50%, -40%);
+  }
+}
+.rider-list__background-name {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 14.4rem;
+  font-style: italic;
+  line-height: 0;
+  text-align: center;
+  text-transform: uppercase;
+  color: #fff;
+  white-space: nowrap;
+  position: absolute;
+  top: 40%;
+  opacity: 0.24;
+}
+
+.rider-list__background-gradient::after {
+  background: linear-gradient(180deg, rgba(23, 28, 33, 0), #171c21);
+}
+.rider-list__background-gradient::after,
+.rider-list__background-gradient::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  pointer-events: none;
+  border-radius: 0.4rem;
+  z-index: 1;
+}
+.rider-list__background-gradient::before {
+  background: linear-gradient(270deg, transparent, #171c21 112%);
+}
+.rider-list__background-gradient {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+@media (min-width: 52.5em) {
+  .rider-list__image-container::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 15rem;
+    left: 0;
+    bottom: 0;
+    pointer-events: none;
+    background: linear-gradient(180deg, rgba(23, 28, 33, 0), #171c21 80%);
+    border-radius: 0.4rem;
+  }
+}
+.rider-list__image-container::after {
+  display: block;
+}
+@media (min-width: 52.5em) {
+  .rider-list__image-container {
+    height: 35.2rem;
+    position: absolute;
+    top: 3.2rem;
+    right: auto;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 70rem;
+    max-height: 38.8rem;
+    overflow: hidden;
+    width: 100%;
+  }
+}
+.rider-list__image-container {
+  display: flex;
+  order: 3;
+  z-index: 1;
+  justify-content: flex-end;
+  margin-right: 0;
+}
+
+.rider-list__image {
+  width: 100%;
+}
+
+@media (min-width: 52.5em) {
+  .rider-list__image-container img {
+    object-position: center;
+  }
+}
+
+@media (min-width: 52.5em) {
+  .rider-list__info-container::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 20rem;
+    left: 0;
+    bottom: 0;
+    pointer-events: none;
+    background: linear-gradient(180deg, rgba(23, 28, 33, 0), #171c21 80%);
+    border-radius: 0.4rem;
+  }
+}
+@media (min-width: 52.5em) {
+  .rider-list__info-container {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    justify-content: flex-end;
+    padding: 1.6rem 1.6rem 2.4rem;
+  }
+}
+.rider-list__info-container {
+  display: flex;
+  flex-flow: column nowrap;
+  border-radius: 0.4rem;
+  z-index: 1;
+  min-height: 14.2rem;
+}
+
+@media (min-width: 52.5em) {
+  .rider-list__info-hashtag {
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+      sans-serif;
+    font-size: 2.4rem;
+    line-height: 2.4rem;
+    color: #fff;
+    z-index: 1;
+    display: block;
+    margin-bottom: 0.4rem;
+  }
+}
+
+@media (min-width: 81.25em) {
+  .rider-list__info-name {
+    font-size: 4rem;
+  }
+}
+@media (min-width: 64.0625em) {
+  .rider-list__info-name {
+    margin-bottom: 1.2rem;
+  }
+}
+@media (min-width: 52.5em) {
+  .rider-list__info-name {
+    flex-flow: row wrap;
+    column-gap: 0.6rem;
+    row-gap: 0;
+    z-index: 1;
+  }
+}
+.rider-list__info-name {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  line-height: 1;
+  color: #fff;
+  display: flex;
+}
+
+.rider-list__details-container {
+  display: flex;
+  flex-flow: row;
+  gap: 0.8rem;
+  height: fit-content;
+  align-items: stretch;
+}
+
+@media (min-width: 52.5em) {
+  .rider-list__details-country {
+    font-size: 1.6rem;
+    max-width: none;
+  }
+}
+.rider-list__details-country {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  line-height: 1.4rem;
+  color: #fff;
+  opacity: 0.8;
+  display: flex;
+  align-items: center;
+}
+
+.rider-list__flag-container {
+  width: 2.7rem;
+  height: 1.8rem;
+  border-radius: 0.4rem;
+  margin-right: 0.5rem;
+  flex-shrink: 0;
+}
+
+.rider-list__details-flag {
+  border-radius: 0.4rem;
+}
+
+@media (min-width: 52.5em) {
+  .rider-list__details-team::before {
+    content: "";
+    display: block;
+    width: 0.05rem;
+    background-color: #585e65;
+    opacity: 0.8;
+    pointer-events: none;
+  }
+}
+.rider-list__details-team::before {
+  height: 100%;
+}
+@media (min-width: 52.5em) {
+  .rider-list__details-team {
+    line-height: 1;
+  }
+}
+@media (min-width: 52.5em) {
+  .rider-list__details-team {
+    font-size: 1.6rem;
+    max-width: none;
+  }
+}
+.rider-list__details-team {
+  gap: 0.8rem;
+  min-width: 50%;
+}
+.rider-list__details-team {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+
+  color: #fff;
+  opacity: 0.8;
+  display: flex;
+  align-items: center;
+}
+
+.in-active-rider {
+  display: none;
+}
+
+.active-rider {
+  display: block !important;
+}
+
+.engine-supplier {
+  display: flex;
+}
+
+@media (min-width: 52.5em) {
+  .engine-supplier__title {
+    line-height: 3.7rem;
+  }
+}
+.engine-supplier__title {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 1rem;
+  letter-spacing: 0.2em;
+  display: flex;
+  align-items: center;
+  margin-right: 1rem;
+  text-align: right;
+}
+
+.engine-supplier__logo {
+  width: 3.2rem;
+  height: 3.2rem;
+  min-width: 3.2rem;
+  max-height: 3.2rem;
+}
+
+@media (min-width: 52.5em) {
+  .teams-grid__container {
+    padding: 5.8rem 4.8rem;
+    background-color: #f9f9f9;
+  }
+}
+
+@media (min-width: 52.5em) {
+  .teams-grid__title::before {
+    width: 2.1rem;
+    height: 2.6rem;
+  }
+}
+.teams-grid__title::before {
+  display: flex;
+  position: relative;
+  content: "";
+  background-image: url(https://www.motogp.com/resources/v7.7.1/i/svg-files/elements/widget-header.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+@media (min-width: 52.5em) {
+  .teams-grid__title {
+    font-size: 3.7rem;
+    gap: 0.6rem;
+    margin-bottom: 3.2rem;
+  }
+}
+.teams-grid__title {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-weight: bold;
+  line-height: 2.7rem;
+  letter-spacing: -0.02em;
+  color: #000;
+  display: flex;
+  align-items: baseline;
+  width: 100%;
+  text-transform: capitalize;
+}
+
+.teams-grid__menu-container {
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 0.8rem;
+}
+
+.teams-grid__menu-item.active-rider-btn {
+  background-color: #c80502;
+  color: #fff;
+  border: none;
+}
+.teams-grid__menu-item {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+  color: #000;
+  padding: 1rem 1.6rem;
+  border-radius: 1.8rem;
+  border: 0.1rem solid #ebebeb;
+}
+
+@media (min-width: 81.25em) {
+  .teams-list__container {
+    padding: 4.8rem 0;
+  }
+}
+@media (min-width: 64.0625em) {
+  .teams-list__container {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+.teams-list__container {
+  display: grid;
+  position: relative;
+  gap: 0.8rem;
+}
+
+@media (min-width: 52.5em) {
+  .teams-list__team {
+    height: 38rem;
+  }
+}
+.teams-list__team {
+  border-radius: 0.4rem;
+  background-color: #171c21;
+}
+.teams-list__team {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  text-decoration: none;
+  overflow: hidden;
+}
+
+.teams-list__background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  min-height: 11.4rem;
+}
+.teams-list__background {
+  border-radius: 0.4rem;
+  background-color: #171c21;
+}
+
+.teams-list__background-team-colour {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 0.4rem;
+  opacity: 0.32;
+}
+.teams-list__background-name {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-weight: bold;
+  font-size: 14.4rem;
+  font-style: italic;
+  line-height: 0;
+  text-align: center;
+  text-transform: uppercase;
+  color: #fff;
+  white-space: nowrap;
+  position: absolute;
+  left: 20%;
+  top: 40%;
+  transform: translate(-20%, -40%);
+  opacity: 0.24;
+}
+
+.teams-list__background-gradient::after {
+  background: linear-gradient(180deg, rgba(23, 28, 33, 0), #171c21);
+}
+.teams-list__background-gradient::after,
+.teams-list__background-gradient::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  pointer-events: none;
+  border-radius: 0.4rem;
+  z-index: 1;
+}
+.teams-list__background-gradient::before {
+  background: linear-gradient(270deg, transparent, #171c21 112%);
+}
+.teams-list__background-gradient {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+@media (min-width: 52.5em) {
+  .teams-list__image-container::after {
+    content: "";
+    position: absolute;
+    width: 150%;
+    height: 20rem;
+    left: 0;
+    bottom: -10rem;
+    pointer-events: none;
+    background: linear-gradient(180deg, rgba(23, 28, 33, 0), #171c21 60%);
+    border-radius: 0.4rem;
+  }
+}
+@media (min-width: 52.5em) {
+  .teams-list__image-container {
+    width: 150%;
+    height: 35.2rem;
+    max-width: 33rem;
+    margin: 0 auto;
+  }
+}
+.teams-list__image-container {
+  display: flex;
+  order: 3;
+  z-index: 1;
+  position: relative;
+}
+
+@media (min-width: 52.5em) {
+  .teams-list__image {
+    position: relative;
+    top: 3.2rem;
+    right: -3rem;
+  }
+}
+.teams-list__image {
+  width: 150%;
+}
+
+@media (min-width: 52.5em) {
+  .teams-list__image img {
+    mask-image: none;
+  }
+}
+.teams-list__image img {
+  border-radius: 0.4rem;
+}
+
+@media (min-width: 52.5em) {
+  .teams-list__info-container::before {
+    content: "";
+    height: 20rem;
+    left: 0;
+    pointer-events: none;
+    /* background: linear-gradient(180deg, rgba(23, 28, 33, 0), #171c218e 150%); */
+    border-radius: 0.4rem;
+  }
+}
+@media (min-width: 52.5em) {
+  .teams-list__info-container {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  }
+}
+.teams-list__info-container {
+  padding: 1.6rem;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  border-radius: 0.4rem;
+  z-index: 2;
+  min-height: 11.4rem;
+}
+
+@media (min-width: 81.25em) {
+  .teams-list__info-name {
+    font-size: 4rem;
+  }
+}
+@media (min-width: 64.0625em) {
+  .teams-list__info-name {
+    margin-bottom: 1.2rem;
+  }
+}
+@media (min-width: 52.5em) {
+  .teams-list__info-name {
+    z-index: 1;
+  }
+}
+.teams-list__info-name {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-weight: bold;
+  line-height: 1;
+  color: #fff;
+}
+
+.teams-list__riders-container {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-end;
+  gap: 0.4rem;
+  height: 100%;
+}
+
+@media (min-width: 64.0625em) {
+  .teams-list__riders-name {
+    line-height: 1.8rem;
+  }
+}
+@media (min-width: 52.5em) {
+  .teams-list__riders-name {
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+      sans-serif;
+    font-size: 1.4rem;
+  }
+}
+.teams-list__riders-name {
+  color: #fff;
+  opacity: 0.8;
+}

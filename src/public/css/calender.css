@@ -1,0 +1,474 @@
+.calendar__container {
+  display: flex;
+  flex-flow: column nowrap;
+  background-color: #f9f9f9;
+}
+
+@media (min-width: 52.5em) {
+  .calendar__header-container {
+    padding: 1.3rem 5rem 3.6rem;
+  }
+}
+@media (min-width: 40em) {
+  .calendar__header-container {
+    flex-flow: row nowrap;
+    align-items: center;
+  }
+}
+.calendar__header-container {
+  display: flex;
+  width: 100vw;
+  background-color: #000;
+  background-image: radial-gradient(
+    96.8% 493.26% at 100% 93.41%,
+    rgba(254, 11, 7, 0.219) 0,
+    rgba(148, 4, 1, 0) 100%
+  );
+  justify-content: space-between;
+  box-shadow: 0 0.4rem 0.8rem 0 rgba(0, 0, 0, 0.15);
+}
+
+@media (min-width: 52.5em) {
+  .calendar__title {
+    font-size: 5.2rem;
+    line-height: 4.8rem;
+  }
+}
+.calendar__title {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  color: #fff;
+  text-transform: capitalize;
+}
+
+@media (min-width: 52.5em) {
+  .calendar__sponsor-container {
+    margin: 0;
+  }
+}
+.calendar__sponsor-container {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+@media (min-width: 52.5em) {
+  .calendar__submenu-container {
+    width: calc(100% - 10rem);
+  }
+}
+.calendar__submenu-container {
+  background-color: #fff;
+  margin: 0 auto;
+  height: 90px;
+  box-shadow: 0 0.4rem 0.8rem 0 rgba(0, 0, 0, 0.15);
+}
+
+@media (min-width: 40em) {
+  .calendar__submenu-list {
+    justify-content: center;
+    gap: 4.8rem;
+  }
+}
+.calendar__submenu-list {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-family: 1.1rem;
+  line-height: 1.4rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  display: flex;
+  flex-flow: row nowrap;
+  background-color: #fff;
+  margin-top: 10px;
+}
+
+@media (min-width: 52.5em) {
+  .calendar__submenu-item {
+    display: flex;
+    align-items: center;
+    padding: 0;
+  }
+}
+
+@media (min-width: 40em) {
+  .calendar__submenu-link {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+  }
+}
+.calendar__submenu-link {
+  color: #1f0101;
+  text-decoration: none;
+}
+
+@media (min-width: 40em) {
+  .calendar__submenu-link .icon {
+    display: block;
+    width: 3.2rem;
+    height: 3.2rem;
+    margin-right: 0.8rem;
+    box-shadow: 0.1rem 0.2rem 0.8rem 0 rgba(0, 0, 0, 0.06);
+    background-color: #c80502;
+  }
+}
+
+@media (min-width: 40em) {
+  .calendar__submenu-link .arrow {
+    margin-top: 0.1rem;
+    margin-left: 0.4rem;
+  }
+}
+.calendar__submenu-link .arrow {
+  width: 0.8rem;
+  height: 0.8rem;
+}
+
+@media (min-width: 52.5em) {
+  .calendar__featured-cta {
+    display: flex;
+  }
+}
+
+@media (min-width: 52.5em) {
+  .calendar__featured-cta-link {
+    margin: 0;
+    align-items: center;
+    display: flex;
+  }
+}
+.calendar__featured-cta-link {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 1.6rem;
+  line-height: 2.1rem;
+  letter-spacing: 0;
+  color: #fff;
+  text-transform: capitalize;
+  text-decoration: none;
+  background-color: #c80502;
+  border-radius: 0.4rem;
+  padding: 1.1rem 2rem;
+}
+
+.calendar__featured-cta-link i {
+  width: 1.6rem;
+  height: 1.6rem;
+  margin-right: 0.5rem;
+  fill: #fff;
+}
+
+.calendar-listings__container {
+  background-color: #f9f9f9;
+  overflow: hidden;
+}
+
+@media (min-width: 52.5em) {
+  .calendar-listings__event-toggle {
+    padding: 5rem 5rem 0;
+  }
+}
+.calendar-listings__event-toggle {
+  display: flex;
+}
+
+.calendar-listings__event-toggle-btn.active-btn {
+  background-color: #c80502;
+  color: #fff;
+  border: none;
+  pointer-events: none;
+}
+@media (min-width: 52.5em) {
+  .calendar-listings__event-toggle-btn {
+    width: auto;
+  }
+}
+.calendar-listings__event-toggle-btn {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+  padding: 1rem 1.6rem;
+  border-radius: 1.8rem;
+  margin: 0 0.5rem;
+  word-break: break-word;
+}
+
+@media (min-width: 52.5em) {
+  .calendar-listings__month {
+    padding: 5rem 5rem 0;
+  }
+}
+
+@media (min-width: 52.5em) {
+  .calendar-listings__month-title::before {
+    background-position: 0 0.3rem;
+    width: 2.1rem;
+    height: 3.7rem;
+  }
+}
+.calendar-listings__month-title::before {
+  display: flex;
+  position: relative;
+  content: "";
+  background-image: url(https://www.motogp.com/resources/v7.7.1/i/svg-files/elements/widget-header.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+@media (min-width: 52.5em) {
+  .calendar-listings__month-title {
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+      sans-serif;
+    font-size: 3.7rem;
+    align-items: flex-start;
+    gap: 0.56rem;
+  }
+}
+.calendar-listings__month-title {
+  line-height: 2.7rem;
+  color: #181c21;
+  display: flex;
+}
+
+.calendar-listings__month-listings {
+  margin-top: 1.6rem;
+}
+
+.calendar-listing__event-container {
+  position: relative;
+  border-radius: 0.4rem;
+  margin-bottom: 1.6rem;
+}
+
+.calendar-listing__event {
+  text-decoration: none;
+}
+
+.calendar-listing__status-container::after {
+  display: flex;
+  position: relative;
+  content: "";
+  background-image: url(https://www.motogp.com/resources/v7.7.1/i/svg-files/elements/event-status.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 2.4rem;
+  order: 2;
+  margin-left: -0.5rem;
+  z-index: 100;
+}
+@media (min-width: 52.5em) {
+  .calendar-listing__status-container {
+    margin-left: 2.8rem;
+  }
+}
+.calendar-listing__status-container {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  display: flex;
+  flex-flow: row nowrap;
+  position: relative;
+  width: fit-content;
+  border-radius: 0.4rem;
+  z-index: 100;
+}
+
+.calendar-listing__status-type {
+  font-size: 1.8rem;
+  line-height: 2rem;
+  color: #fff;
+  padding: 0.3rem 0.2rem 0.5rem 1rem;
+  position: relative;
+  z-index: 100;
+  width: fit-content;
+  background-color: #c80502;
+  border-radius: 0.4rem 0 0 0.4rem;
+  order: 1;
+}
+.calendar-listing__event-container--finished .calendar-listing__status-bar {
+  background-color: #000;
+  color: #fff;
+}
+.calendar-listing__status-bar {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  border-radius: 0 0.4rem 0.4rem 0;
+  padding: 0.3rem 1rem 0.3rem 2.4rem;
+  margin-left: -2rem;
+  clip-path: polygon(2% 0, 100% 0, 100% 100%, 0 100%);
+  order: 3;
+}
+.calendar-listing__event-container--finished .calendar-listing__status-icon {
+  background-image: url(https://www.motogp.com/resources/v7.7.1/i/svg-files/elements/event-finished.svg);
+}
+.calendar-listing__status-icon {
+  background-repeat: no-repeat;
+  width: 2rem;
+  height: 1.8rem;
+}
+
+.calendar-listing__status-text {
+  font-size: 1.4rem;
+  line-height: 1;
+  margin-left: 0.6rem;
+  text-transform: capitalize;
+}
+
+@media (min-width: 52.5em) {
+  .calendar-listing__information {
+    padding: 0 0 0 2.8rem;
+    margin-top: -1.2rem;
+    min-height: 12.4rem;
+    background-image: url(https://www.motogp.com/resources/v7.7.1/i/svg-files/elements/event-desktop-grid.svg);
+    background-position: 66% 100%;
+    border-radius: 0;
+  }
+}
+.calendar-listing__information {
+  display: flex;
+  flex-flow: row nowrap;
+  background-color: #fff;
+  box-shadow: 0.1rem 0.5rem 0.8rem 0 rgba(0, 0, 0, 0.1);
+  background-repeat: no-repeat;
+}
+
+@media (min-width: 52.5em) {
+  .calendar-listing__details {
+    display: flex;
+    flex-flow: row nowrap;
+    padding: 0;
+  }
+}
+.calendar-listing__details {
+  flex: 2.2;
+}
+
+@media (min-width: 52.5em) {
+  .calendar-listing__date-container {
+    min-width: 14.4rem;
+  }
+}
+.calendar-listing__date-container {
+  display: flex;
+  align-items: center;
+}
+
+.calendar-listing__date-start-container {
+  order: 1;
+}
+
+.calendar-listing__date-start-day {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 5.2rem;
+  line-height: 4.2rem;
+  letter-spacing: -0.04em;
+  color: #181c21;
+  margin-bottom: 0.5rem;
+}
+
+.calendar-listing__date-start-month {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 1.4rem;
+  line-height: 16px;
+  color: #585e65;
+  text-transform: uppercase;
+}
+
+.calendar-listing__date-end-container::before {
+  position: absolute;
+  display: block;
+  content: "";
+  width: 1rem;
+  height: 0.2rem;
+  background-color: #585e65;
+  top: 3rem;
+  left: -2.4rem;
+}
+.calendar-listing__date-end-container {
+  margin-left: 4.2rem;
+  position: relative;
+  order: 3;
+}
+.calendar-listing__date-end-day {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 5.2rem;
+  line-height: 4.2rem;
+  letter-spacing: -0.04em;
+  color: #181c21;
+  margin-bottom: 0.5rem;
+}
+.calendar-listing__date-end-month {
+  font-size: 1.4rem;
+  line-height: 16px;
+  color: #585e65;
+  text-transform: uppercase;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+@media (min-width: 52.5em) {
+  .calendar-listing__title {
+    font-size: 4rem;
+    line-height: 3.8rem;
+    flex-flow: column nowrap;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 0;
+    padding: 1.2rem 2.5rem 1.2rem 9rem;
+  }
+}
+.calendar-listing__title {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  color: #181c21;
+  display: flex;
+  flex: 1;
+}
+
+@media (min-width: 52.5em) {
+  .calendar-listing__location-container--desktop {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    gap: 0.8rem;
+    margin: 1rem 0 0;
+    padding: 0;
+  }
+}
+@media (min-width: 52.5em) {
+  .calendar-listing__location-container--desktop
+    .calendar-listing__location-flag {
+    width: 2.7rem;
+    height: 1.8rem;
+    display: flex;
+    margin: 0;
+  }
+}
+@media (min-width: 52.5em) {
+  .calendar-listing__location-flag {
+    font-size: 1.4rem;
+  }
+}
+.calendar-listing__location-flag {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  line-height: 1;
+  color: #585e65;
+}
+
+.calendar-listing__location-flag img {
+  border-radius: 0.4rem;
+  border: 0.1rem solid #c5c5c5;
+}
+
+@media (min-width: 52.5em) {
+  .calendar-listing__location-track-name {
+    font-size: 1.4rem;
+  }
+}
+.calendar-listing__location-track-name {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  line-height: 1;
+  color: #585e65;
+}
+
+.calendar-listing__event-container--upcoming .calendar-listing__status-icon {
+  background-image: url(https://www.motogp.com/resources/v7.7.1/i/svg-files/elements/event-upcoming.svg);
+  color: #fff;
+}
+.calendar-listing__event-container--upcoming .calendar-listing__status-bar {
+  color: #fff;
+}

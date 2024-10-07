@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../public/css/main.css" />
+    <link rel="stylesheet" href="../public/css/rider-team.css" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Rider - team</title>
+</head>
+
+<body>
+    <header class="main-nav">
+        <div class="main-nav__desktop-top-nav">
+            <div class="global-top-nav">
+                <div class="global-top-nav__container">
+                    <ul class="global-top-nav__menu-list">
+                        <li class="global-top-nav__item" style="order: 1">
+                            <a class="global-top-nav__link">#RacingForTheFuture</a>
+                        </li>
+                        <li class="global-top-nav__item" style="order: 2">
+                            <a class="global-top-nav__link">Tickets</a>
+                        </li>
+                        <li class="global-top-nav__item" style="order: 3">
+                            <a class="global-top-nav__link">Hospitality</a>
+                        </li>
+                        <li class="global-top-nav__item" style="order: 4">
+                            <a class="global-top-nav__link">Experiences</a>
+                        </li>
+                        <li class="global-top-nav__item" style="order: 5">
+                            <a class="global-top-nav__link">Store</a>
+                        </li>
+                        <li class="global-top-nav__item" style="order: 6">
+                            <a class="global-top-nav__link">Authentics</a>
+                        </li>
+                    </ul>
+                    <ul class="global-top-nav__subcription-list">
+                        <li class="global-top-nav__item timingpass">
+                            <a class="global-top-nav__link external-link timingpass">
+                                MotoGP™TIMINGPASS
+                            </a>
+                        </li>
+                        <li class="global-top-nav__item videopass">
+                            <a class="global-top-nav__link videopass"> MotoGP™VIDEOPASS </a>
+                        </li>
+                    </ul>
+                    <span class="global-top-nav__subscribe-container">
+                        <a class="global-top-nav__subscribe-btn">Subscribe</a>
+                    </span>
+                    <div class="global-top-nav__fim">
+                        <a class="global-top-nav__fim-logo"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="main-nav__container">
+            <div class="main-nav__wrapper">
+                <div class="main-nav__content">
+                    <button class="main-nav__overlay-menu-btn">
+                        <svg class=" " aria-hidden="true">
+                            <i class="fa-solid fa-bars" style="color: #ffffff"></i>
+                        </svg>
+                    </button>
+                    <a id="navigateBtnHomePage" class="main-nav__logo-75"></a>
+                    <div class="main-nav__menu-container">
+                        <ul class="main-nav__menu-list">
+                            <li class="main-nav__item" id="navigateBtnCalendar">
+                                <a class="main-nav__link"> Calendar </a>
+                            </li>
+                            <li class="main-nav__item" id="navigateBtnResults&Standings">
+                                <a class="main-nav__link"> Results & Standings </a>
+                            </li>
+                            <li class="main-nav__item" id="navigateBtnRiders&Teams">
+                                <a class="main-nav__link"> Riders & Teams </a>
+                            </li>
+                            <li class="main-nav__item">
+                                <a class="main-nav__link"> VideoPass </a>
+                            </li>
+                            <li class="main-nav__item">
+                                <a class="main-nav__link"> Videos </a>
+                            </li>
+                            <li class="main-nav__item">
+                                <a class="main-nav__link"> News </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="sso sso--main-bar">
+                        <a class="sso__login-btn">Login</a>
+                        <a class="sso__register-btn">
+                            <span class="sso__register-btn-text sso__register-btn-text--bold">Register</span>
+                            <div class="sso__picture">
+                                <svg class="icon" aria-hidden="true">
+                                    <i class="fa-solid fa-helmet-un" style="color: #ffffff"></i>
+                                </svg>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <div class="default-template">
+            <div class="rider-header">
+                <div class="rider-header__header">
+                    <div class="page-header">
+                        <div class="page-header__container page-header__container--left">
+                            <h1 class="page-header__title">Riders & Teams</h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="rider-header__search">
+                    <div class="rider-search">
+                        <button class="rider-search__button"></button>
+                    </div>
+                </div>
+            </div>
+            <div class="tabs-header">
+                <nav class="tabs widget-outer-spacing">
+                    <ul class="tabs__list tabs__list--center">
+                        <li class="tabs__item">
+                            <a class="tabs__link is-active" onclick="showSection('rider', this); return false;">
+                                <span class="tabs__link-text"> Riders </span>
+                            </a>
+                        </li>
+                        <li class="tabs__item">
+                            <a class="tabs__link">
+                                <span class="tabs__link-text"> Teams </span>
+                            </a>
+                        </li>
+                        <li class="tabs__item">
+                            <a class="tabs__link">
+                                <span class="tabs__link-text"> Legends </span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div id="rider" class="rider-grid__container in-active active">
+                <div class="rider-grid__menu-container">
+                    <button class="rider-grid__menu-item active-rider-btn" onclick="showRider('moto1', this)">
+                        MotoGP™
+                    </button>
+                    <button class="rider-grid__menu-item">
+                        Moto2™
+                    </button>
+                    <button class="rider-grid__menu-item">
+                        Moto3™
+                    </button>
+                    <button class="rider-grid__menu-item">
+                        MotoE™
+                    </button>
+                </div>
+
+                <div id="moto1" class="rider-grid__motogp in-active-rider active-rider">
+                    <div class="rider-grid__supplier"></div>
+                    <div id="riderList" class="rider-list__container"></div>
+                </div>
+                <div id="moto2" class="in-active-rider">
+                    <div class="rider-grid__supplier">
+                        <div class="engine-supplier">
+                            <div class="engine-supplier__title">
+                                Moto2™ EXCLUSIVE ENGINE SUPPLIER
+                            </div>
+                            <a class="engine-supplier__logo">
+                                <div class="u-observed lazy-image-wrapper">
+                                    <picture class="picture">
+                                        <img class="img engine-supplier__img picture__img"
+                                            src="https://resources.motogp.pulselive.com/photo-resources/2024/06/14/c4c45ce9-9eb2-4fd4-8671-2a1785e3592f/Triumph_Logo.png?height=120&width=120"
+                                            alt="Triumph_Logo" />
+                                    </picture>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="rider-grid__moto2">
+                        <div id="riderList2" class="rider-list__container"></div>
+                    </div>
+                </div>
+                <div id="moto3" class="in-active-rider">
+                    <div class="rider-grid__supplier"></div>
+                    <div class="rider-grid__moto3">
+                        <div id="riderList3" class="rider-list__container"></div>
+                    </div>
+                </div>
+                <div id="motoe" class="in-active-rider">
+                    <div class="rider-grid__supplier"></div>
+                    <div class="rider-grid__motoe">
+                        <div id="riderList4" class="rider-list__container"></div>
+                    </div>
+                </div>
+            </div>
+            <div id="team" class="teams-grid__container in-active">
+                <div class="teams-grid__title">Teams</div>
+                <div class="teams-grid__menu-container">
+                    <button class="teams-grid__menu-item active-rider-btn" onclick="showTeam('team-moto1', this)">
+                        MotoGP™
+                    </button>
+                    <button class="teams-grid__menu-item" onclick="showTeam('team-moto2', this)">
+                        Moto2™
+                    </button>
+                    <button class="teams-grid__menu-item" onclick="showTeam('team-moto3', this)">
+                        Moto3™</button><button class="teams-grid__menu-item" onclick="showTeam('team-motoe', this)">
+                        MotoE™
+                    </button>
+                </div>
+
+                <div id="team-moto1" class="teams-grid__motogp in-active-rider active-rider">
+                    <div id="teamList" class="teams-list__container"></div>
+                </div>
+                <div id="team-moto2" class="in-active-rider">
+                    <div id="teamList2" class="teams-list__container"></div>
+                </div>
+                <div id="team-moto3" class="in-active-rider">
+                    <div id="teamList3" class="teams-list__container"></div>
+                </div>
+                <div id="team-motoe" class="in-active-rider">
+                    <div id="teamList4" class="teams-list__container"></div>
+                </div>
+            </div>
+            <div id="legend" class="rider-grid__container in-active">
+                <div class="rider-grid__title">Legends</div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer__container">
+            <div class="footer__logo-container">
+                <a class="footer__logo"></a>
+            </div>
+            <section class="footer-sponsors">
+                <div class="footer-sponsors__container">
+                    <div class="footer-sponsors__title">Official Sponsors</div>
+                    <div class="footer-sponsors__list">
+                        <a class="footer-sponsors__sponsor">
+                            <div class="js-lazy-load u-observed lazy-image-wrapper is-loaded">
+                                <picture class="picture">
+                                    <source class="" srcset="
+                        https://resources.motogp.pulselive.com/photo-resources/2024/05/09/74b76695-1cf4-4776-8a3a-e5e28a32b484/sponsor-qatar.png?width=100,
+                        https://resources.motogp.pulselive.com/photo-resources/2024/05/09/74b76695-1cf4-4776-8a3a-e5e28a32b484/sponsor-qatar.png?width=200 2x
+                      " media="(min-width: 0px)" />
+                                    <img class="js-faded-image fade-in-on-load picture__img is-loaded"
+                                        src="https://resources.motogp.pulselive.com/photo-resources/2024/05/09/74b76695-1cf4-4776-8a3a-e5e28a32b484/sponsor-qatar.png?width=100"
+                                        alt="sponsor-qatar" />
+                                </picture>
+                            </div>
+                        </a>
+
+                        <a class="footer-sponsors__sponsor">
+                            <div class="js-lazy-load u-observed lazy-image-wrapper is-loaded">
+                                <picture class="picture">
+                                    <source class="" srcset="
+                        https://resources.motogp.pulselive.com/photo-resources/2024/09/12/179ab216-720b-4b7c-bc32-c7579a8b1cc2/Tissot_Main_Sponsor.png?width=100,
+                        https://resources.motogp.pulselive.com/photo-resources/2024/09/12/179ab216-720b-4b7c-bc32-c7579a8b1cc2/Tissot_Main_Sponsor.png?width=200 2x
+                      " media="(min-width: 0px)" />
+                                    <img class="js-faded-image fade-in-on-load picture__img is-loaded"
+                                        src="https://resources.motogp.pulselive.com/photo-resources/2024/09/12/179ab216-720b-4b7c-bc32-c7579a8b1cc2/Tissot_Main_Sponsor.png?width=100"
+                                        alt="Tissot_Main_Sponsor" />
+                                </picture>
+                            </div>
+                        </a>
+
+                        <a class="footer-sponsors__sponsor">
+                            <div class="js-lazy-load u-observed lazy-image-wrapper is-loaded">
+                                <picture class="picture">
+                                    <source class="" srcset="
+                        https://resources.motogp.pulselive.com/photo-resources/2023/03/27/6499fb7c-58c7-4e12-b107-98156ed85931/MICHELIN_logo.png?width=100,
+                        https://resources.motogp.pulselive.com/photo-resources/2023/03/27/6499fb7c-58c7-4e12-b107-98156ed85931/MICHELIN_logo.png?width=200 2x
+                      " media="(min-width: 0px)" />
+                                    <img class="js-faded-image fade-in-on-load picture__img is-loaded"
+                                        src="https://resources.motogp.pulselive.com/photo-resources/2023/03/27/6499fb7c-58c7-4e12-b107-98156ed85931/MICHELIN_logo.png?width=100"
+                                        alt="MICHELIN_logo" />
+                                </picture>
+                            </div>
+                        </a>
+
+                        <a class="footer-sponsors__sponsor">
+                            <div class="js-lazy-load u-observed lazy-image-wrapper is-loaded">
+                                <picture class="picture">
+                                    <source class="" srcset="
+                        https://resources.motogp.pulselive.com/photo-resources/2023/10/25/f0612155-0f76-452f-9db8-348c37fdd01b/BMW-M_logo.png?width=100,
+                        https://resources.motogp.pulselive.com/photo-resources/2023/10/25/f0612155-0f76-452f-9db8-348c37fdd01b/BMW-M_logo.png?width=200 2x
+                      " media="(min-width: 0px)" />
+                                    <img class="js-faded-image fade-in-on-load picture__img is-loaded"
+                                        src="https://resources.motogp.pulselive.com/photo-resources/2023/10/25/f0612155-0f76-452f-9db8-348c37fdd01b/BMW-M_logo.png?width=100"
+                                        alt="BMW-M_logo" />
+                                </picture>
+                            </div>
+                        </a>
+
+                        <a class="footer-sponsors__sponsor">
+                            <div class="js-lazy-load u-observed lazy-image-wrapper is-loaded">
+                                <picture class="picture">
+                                    <source class="" srcset="
+                        https://resources.motogp.pulselive.com/photo-resources/2023/04/17/8a22cccc-b9e4-4b80-8a78-da85a042adf2/EstrellaGalicia_Logo.png?width=100,
+                        https://resources.motogp.pulselive.com/photo-resources/2023/04/17/8a22cccc-b9e4-4b80-8a78-da85a042adf2/EstrellaGalicia_Logo.png?width=200 2x
+                      " media="(min-width: 0px)" />
+                                    <img class="js-faded-image fade-in-on-load picture__img is-loaded"
+                                        src="https://resources.motogp.pulselive.com/photo-resources/2023/04/17/8a22cccc-b9e4-4b80-8a78-da85a042adf2/EstrellaGalicia_Logo.png?width=100"
+                                        alt="EstrellaGalicia_Logo" />
+                                </picture>
+                            </div>
+                        </a>
+
+                        <a class="footer-sponsors__sponsor">
+                            <div class="js-lazy-load u-observed lazy-image-wrapper is-loaded">
+                                <picture class="picture">
+                                    <source class="" srcset="
+                        https://resources.motogp.pulselive.com/photo-resources/2023/03/27/ef2af200-beec-45b5-bfac-0e9b453ad4ed/DHL_logo.png?width=100,
+                        https://resources.motogp.pulselive.com/photo-resources/2023/03/27/ef2af200-beec-45b5-bfac-0e9b453ad4ed/DHL_logo.png?width=200 2x
+                      " media="(min-width: 0px)" />
+                                    <img class="js-faded-image fade-in-on-load picture__img is-loaded"
+                                        src="https://resources.motogp.pulselive.com/photo-resources/2023/03/27/ef2af200-beec-45b5-bfac-0e9b453ad4ed/DHL_logo.png?width=100"
+                                        alt="DHL_logo" />
+                                </picture>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </section>
+            <div class="footer__menu-container">
+                <div class="footer__menu-section">
+                    <div class="footer__menu-title">Media & Commercial</div>
+                    <ul class="footer__menu-list">
+                        <li class="footer__menu-item">
+                            <a class="footer__menu-link"> Official Sponsors </a>
+                        </li>
+
+                        <li class="footer__menu-item">
+                            <a class="footer__menu-link"> TV Broadcast </a>
+                        </li>
+
+                        <li class="footer__menu-item">
+                            <a class="footer__menu-link"> MotoGP™ Apps </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="footer__menu-section">
+                    <div class="footer__menu-title">Help</div>
+                    <ul class="footer__menu-list">
+                        <li class="footer__menu-item">
+                            <a class="footer__menu-link"> Contact us </a>
+                        </li>
+
+                        <li class="footer__menu-item">
+                            <a class="footer__menu-link">FAQ </a>
+                        </li>
+
+                        <li class="footer__menu-item">
+                            <a class="footer__menu-link"> Join MotoGP™ </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="footer__menu-section">
+                    <div class="footer__menu-title">Tickets & Hospitality</div>
+                    <ul class="footer__menu-list">
+                        <li class="footer__menu-item">
+                            <a class="footer__menu-link"> Tickets</a>
+                        </li>
+
+                        <li class="footer__menu-item">
+                            <a class="footer__menu-link"> Hospitality </a>
+                        </li>
+
+                        <li class="footer__menu-item">
+                            <a class="footer__menu-link"> Experiences </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="footer__menu-section">
+                    <div class="footer__menu-title">Game Hub</div>
+                    <ul class="footer__menu-list">
+                        <li class="footer__menu-item">
+                            <a class="footer__menu-link"> MotoGP™ Fantasy </a>
+                        </li>
+
+                        <li class="footer__menu-item">
+                            <a class="footer__menu-link"> MotoGP™ Predictor </a>
+                        </li>
+
+                        <li class="footer__menu-item">
+                            <a class="footer__menu-link"> MotoGP™ eSport </a>
+                        </li>
+
+                        <li class="footer__menu-item">
+                            <a class="footer__menu-link"> MotoGP™ Guru </a>
+                        </li>
+
+                        <li class="footer__menu-item">
+                            <a class="footer__menu-link"> MotoGP™24 </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="footer__menu-section">
+                    <div class="footer__menu-title">About Us</div>
+                    <ul class="footer__menu-list">
+                        <li class="footer__menu-item">
+                            <a class="footer__menu-link"> Dorna Sports </a>
+                        </li>
+
+                        <li class="footer__menu-item">
+                            <a class="footer__menu-link"> Cookie Policy </a>
+                        </li>
+
+                        <li class="footer__menu-item">
+                            <a class="footer__menu-link"> Legal Notice </a>
+                        </li>
+
+                        <li class="footer__menu-item">
+                            <a class="footer__menu-link"> Privacy Policy </a>
+                        </li>
+
+                        <li class="footer__menu-item">
+                            <a class="footer__menu-link"> Purchase Policy </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__copyright">© 2024 nhom 3</div>
+        </div>
+    </footer>
+
+    <script>
+        function showSection(sectionId, link) {
+            const sections = document.querySelectorAll(".in-active");
+            sections.forEach((section) => {
+                section.classList.remove("active");
+            });
+
+            const activeSection = document.getElementById(sectionId);
+            activeSection.classList.add("active");
+
+            const links = document.querySelectorAll(".tabs__link");
+            links.forEach((l) => {
+                l.classList.remove("is-active");
+            });
+            link.classList.add("is-active");
+        }
+
+        function showRider(riderId, button) {
+            //an tat ca cac muc
+            const inActive = document.querySelectorAll(".in-active-rider");
+            inActive.forEach((inActive) => {
+                inActive.classList.remove("active-rider");
+            });
+            //hien thi muc duoc chon
+            const active = document.getElementById(riderId);
+            active.classList.add("active-rider");
+
+            //doi nut thanh mau do
+            const riderBtn = document.querySelectorAll(".rider-grid__menu-item");
+            riderBtn.forEach((btn) => {
+                btn.classList.remove("active-rider-btn");
+            });
+            button.classList.add("active-rider-btn");
+        }
+
+        function showTeam(teamId, button) {
+            //an tat ca cac muc
+            const inActive = document.querySelectorAll(".in-active-rider");
+            inActive.forEach((inActive) => {
+                inActive.classList.remove("active-rider");
+            });
+            //hien thi muc duoc chon
+            const active = document.getElementById(teamId);
+            active.classList.add("active-rider");
+
+            //doi nut thanh mau do
+            const teamBtn = document.querySelectorAll(".teams-grid__menu-item");
+            teamBtn.forEach((btn) => {
+                btn.classList.remove("active-rider-btn");
+            });
+            button.classList.add("active-rider-btn");
+        }
+
+        //chuyen trang
+        document
+            .getElementById("navigateBtnCalendar")
+            .addEventListener("click", function () {
+                window.location.href = "calendar.html";
+            });
+        document
+            .getElementById("navigateBtnResults&Standings")
+            .addEventListener("click", function () {
+                window.location.href = "result-standing.html";
+            });
+        document
+            .getElementById("navigateBtnRiders&Teams")
+            .addEventListener("click", function () {
+                window.location.href = "rider-team.html";
+            });
+
+        document
+            .getElementById("navigateBtnHomePage")
+            .addEventListener("click", function () {
+                window.location.href = "index.html";
+            });
+    </script>
+    <script src="test.js"></script>
+</body>
+
+</html>

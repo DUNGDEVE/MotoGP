@@ -1,0 +1,101 @@
+CREATE DATABASE motogp
+USE motogp
+CREATE TABLE countries (
+    country_id INT AUTO_INCREMENT PRIMARY KEY,
+    country_name VARCHAR(100) NOT NULL,
+    flag_url VARCHAR(255)
+);
+CREATE TABLE circuits (
+    circuit_id INT AUTO_INCREMENT PRIMARY KEY,
+    circuit_name VARCHAR(100) NOT NULL,
+    location VARCHAR(100),
+    country_id INT,
+    circuit_image_url VARCHAR(255),
+    FOREIGN KEY (country_id) REFERENCES countries(country_id)
+);
+CREATE TABLE events (
+    event_id INT AUTO_INCREMENT PRIMARY KEY,
+    event_name VARCHAR(100) NOT NULL,
+    event_month VARCHAR(50),
+    circuit_id INT,
+    start_date DATE,
+    end_date DATE,
+    status ENUM('Finished', 'Upcoming'),
+    event_type ENUM('Grands Prix', 'All Event'),
+    FOREIGN KEY (circuit_id) REFERENCES circuits(circuit_id)
+);
+CREATE TABLE categories (
+    category_id INT AUTO_INCREMENT PRIMARY KEY,
+    category_name VARCHAR(50) NOT NULL
+);
+CREATE TABLE sessions (
+    session_id INT AUTO_INCREMENT PRIMARY KEY,
+    event_id INT,
+    category_id INT,
+    session_name VARCHAR(100),
+    FOREIGN KEY (event_id) REFERENCES events(event_id),
+    FOREIGN KEY (category_id) REFERENCES categories(category_id)
+);
+CREATE TABLE teams (
+    team_id INT AUTO_INCREMENT PRIMARY KEY,
+    team_name VARCHAR(100) NOT NULL,
+    team_image_url VARCHAR(255)
+);
+CREATE TABLE riders (
+    rider_id INT AUTO_INCREMENT PRIMARY KEY,
+    rider_name VARCHAR(100) NOT NULL,
+    rider_image_url VARCHAR(255),
+    country_id INT,
+    team_id INT,
+    rider_number INT,
+    FOREIGN KEY (country_id) REFERENCES countries(country_id),
+    FOREIGN KEY (team_id) REFERENCES teams(team_id)
+);
+CREATE TABLE rider_statistics (
+    statistic_id INT AUTO_INCREMENT PRIMARY KEY,
+    rider_id INT,
+    season_year INT,
+    position INT,
+    points INT,
+    victories INT,
+    word_championships INT,
+    podiums INT,
+    poles INT,
+    races INT,
+    FOREIGN KEY (rider_id) REFERENCES riders(rider_id)
+);
+CREATE TABLE results (
+    result_id INT AUTO_INCREMENT PRIMARY KEY,
+    session_id INT,
+    rider_id INT,
+    team_id INT,
+    position INT,
+    points INT,
+    time_gap VARCHAR(50),
+    FOREIGN KEY (session_id) REFERENCES sessions(session_id),
+    FOREIGN KEY (rider_id) REFERENCES riders(rider_id),
+    FOREIGN KEY (team_id) REFERENCES teams(team_id)
+);
+CREATE TABLE team_statistics (
+    statistic_id INT AUTO_INCREMENT PRIMARY KEY,
+    team_id INT,
+    season_year INT,
+    position INT,
+    points INT,
+    victories INT,
+    FOREIGN KEY (team_id) REFERENCES teams(team_id)
+);
+INSERT INTO countries (country_name, flag_url) 
+VALUES 
+    ('Italy', 'url_to_italy_flag'),
+    ('Spain', 'url_to_spain_flag'),
+    ('France', 'url_to_france_flag');
+INSERT INTO teams (team_name, team_image_url,) 
+VALUES 
+    ('Ducati Team', 'url_to_ducati_team_image'),
+    ('Yamaha Team', 'url_to_yamaha_team_image');
+INSERT INTO riders (rider_name, rider_image_url, country_id, team_id, rider_number) 
+VALUES 
+    ('Francesco Bagnaia', 'url_to_bagnaia_image', 1, 1, 63),  -- Rider từ Italy, Ducati Team
+    ('Fabio Quartararo', 'url_to_quartararo_image', 3, 2, 20),  -- Rider từ France, Yamaha Team
+    ('Marc Marquez', 'url_to_marquez_image', 2, 2, 93);  -- Rider từ Spain, Yamaha Team

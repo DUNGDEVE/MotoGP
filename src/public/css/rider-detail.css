@@ -1,0 +1,665 @@
+@media (min-width: 52.5em) {
+  .rider-hero__container {
+    border-bottom: 0.05rem solid #33383e;
+  }
+}
+.rider-hero__container {
+  position: relative;
+  background-color: #171c21;
+}
+
+@media (min-width: 52.5em) {
+  .rider-hero__back-button {
+    left: 4.8rem;
+    top: 4.6rem;
+  }
+}
+.rider-hero__back-button {
+  position: absolute;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.4rem;
+  letter-spacing: 0.2em;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  gap: 1.3rem;
+}
+
+.rider-hero__back-button .chevron {
+  width: 0.6rem;
+  height: 1rem;
+  fill: #fff;
+}
+
+@media (min-width: 52.5em) {
+  .rider-hero__background {
+    height: 72rem;
+  }
+}
+.rider-hero__background {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+@media (min-width: 52.5em) {
+  .rider-hero__background-team-colour {
+    height: 100%;
+  }
+}
+.rider-hero__background-team-colour {
+  opacity: 0.32;
+  background-image: linear-gradient(180deg, rgba(23, 28, 33, 0), #171c21);
+}
+
+@media (min-width: 52.5em) {
+  .rider-hero__background-info {
+    left: auto;
+    top: auto;
+    bottom: 0;
+    display: flex;
+    flex-flow: column wrap;
+    gap: 1.2rem;
+    align-content: flex-end;
+    justify-content: flex-end;
+    padding-right: 5rem;
+    overflow: visible;
+    opacity: 0.64;
+  }
+}
+.rider-hero__background-info {
+  position: absolute;
+  width: 100%;
+  height: 39rem;
+}
+
+@media (min-width: 52.5em) {
+  .rider-hero__background-initials {
+    font-size: 5.6rem;
+    font-style: normal;
+    line-height: 1;
+    text-align: right;
+    color: #fff;
+    position: relative;
+    left: auto;
+    top: auto;
+    transform: translate(0);
+    margin-bottom: -8.7rem;
+  }
+}
+.rider-hero__background-initials {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+@media (min-width: 52.5em) {
+  .rider-hero__background-name {
+    font-family: serif;
+    font-weight: bold;
+    font-size: 32rem;
+    line-height: 32rem;
+    text-align: right;
+    text-transform: uppercase;
+    color: #fff;
+    display: flex;
+  }
+}
+
+@media (min-width: 52.5em) {
+  .rider-hero__background-gradient {
+    height: 100%;
+  }
+}
+.rider-hero__background-gradient {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  background: linear-gradient(270deg, transparent, #171c21 112%);
+}
+
+@media (min-width: 52.5em) {
+  .rider-hero__background-image {
+    right: 0;
+    bottom: 0;
+    left: auto;
+    transform: none;
+    width: 80rem;
+  }
+}
+.rider-hero__background-image {
+  position: absolute;
+}
+
+.rider-hero__background .rider-image-container {
+  position: relative;
+}
+
+.rider-hero__background .rider-image img {
+  left: 50%;
+  position: relative;
+  transform: translateX(-50%);
+  display: block;
+  width: auto;
+}
+
+.rider-hero__background .rider-image img {
+  left: 51%;
+  position: relative;
+  transform: translateX(-55%);
+  display: block;
+  width: 102rem;
+}
+.rider-hero__background .rider-image .picture__img {
+  max-width: 114%;
+}
+
+@media (min-width: 52.5em) {
+  .rider-hero__background-image-gradient {
+    height: 15rem;
+    background: linear-gradient(180deg, rgba(23, 28, 33, 0), #171c21 90%);
+  }
+}
+.rider-hero__background-image-gradient {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+@media (min-width: 52.5em) {
+  .rider-hero__info-container {
+    align-items: start;
+    border-bottom: none;
+    margin-top: 0;
+    margin-left: 4.8rem;
+    padding: 0;
+    position: absolute;
+    top: 8.4rem;
+    width: 50%;
+    height: calc(100% - 8.4rem);
+  }
+}
+.rider-hero__info-container {
+  display: flex;
+  flex-flow: column;
+  min-height: 16rem;
+  z-index: 1;
+}
+
+@media (min-width: 52.5em) {
+  .rider-hero__info-hashtag {
+    margin-bottom: 0;
+  }
+}
+.rider-hero__info-hashtag {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-weight: bold;
+  line-height: 1;
+  text-align: center;
+  color: #ededed;
+  font-size: 2.4rem;
+}
+
+@media (min-width: 52.5em) {
+  .rider-hero__info-name {
+    font-size: 6.4rem;
+    margin-bottom: 2.1rem;
+    width: 100%;
+    text-align: left;
+  }
+}
+.rider-hero__info-name {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-weight: bold;
+  line-height: 1;
+  color: #ededed;
+}
+
+@media (min-width: 52.5em) {
+  .rider-hero__details-container::after {
+    height: 1.4rem;
+    background-color: rgba(88, 94, 101, 0.8);
+    margin-top: 0.3rem;
+    pointer-events: none;
+  }
+}
+.rider-hero__details-container::after {
+  content: "";
+  width: 0.1rem;
+  order: 2;
+}
+@media (min-width: 52.5em) {
+  .rider-hero__details-container {
+    gap: 1.2rem;
+    min-height: 2.4rem;
+    margin-bottom: 2.4rem;
+    align-items: center;
+  }
+}
+.rider-hero__details-container {
+  display: flex;
+}
+
+@media (min-width: 52.5em) {
+  .rider-hero__details-country {
+    font-size: 1.8rem;
+    line-height: 2.4rem;
+  }
+}
+.rider-hero__details-country {
+  order: 1;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  color: hsla(0, 0%, 100%, 0.8);
+  display: flex;
+  align-items: center;
+}
+
+.rider-hero__flag-container {
+  width: 2.7rem;
+  height: 1.8rem;
+  border-radius: 0.4rem;
+  margin-right: 0.8rem;
+  flex-shrink: 0;
+}
+
+.rider-hero__details-flag {
+  border-radius: 0.4rem;
+}
+
+@media (min-width: 52.5em) {
+  .rider-hero__details-team {
+    font-size: 1.8rem;
+    line-height: 2.4rem;
+  }
+}
+.rider-hero__details-team {
+  order: 3;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  color: hsla(0, 0%, 100%, 0.8);
+  display: flex;
+  align-items: center;
+}
+
+@media (min-width: 52.5em) {
+  .rider-hero__shop-now-button {
+    margin-bottom: 0;
+    padding: 1rem 1.6rem;
+  }
+}
+.rider-hero__shop-now-button {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-weight: bold;
+  font-size: 1.4rem;
+  line-height: 1.3rem;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  border: 0.1rem solid #fff;
+  border-radius: 0.4rem;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+@media (min-width: 52.5em) {
+  .rider-hero__current-season-container {
+    padding: 0;
+    background-color: transparent;
+    width: auto;
+    height: 100%;
+    justify-content: flex-end;
+    margin-bottom: 4.8rem;
+    border: none;
+  }
+}
+.rider-hero__current-season-container {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: flex-end;
+}
+
+.rider-hero__career-highlight-title::before,
+.rider-hero__current-season-title::before {
+  display: flex;
+  position: relative;
+  content: "";
+  background-image: url(https://www.motogp.com/resources/v7.8.0/i/svg-files/elements/widget-header.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 1.3rem;
+  height: 1.6rem;
+}
+.rider-hero__current-season-title {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-weight: bold;
+  font-size: 2.4rem;
+  line-height: 2.7rem;
+  letter-spacing: -0.02em;
+  color: #ededed;
+  display: flex;
+  align-items: baseline;
+  gap: 0.4rem;
+  margin-bottom: 1.6rem;
+  width: 100%;
+}
+
+.rider-hero__career-highlight-stats-container::after,
+.rider-hero__current-season-stats-container::after {
+  content: "";
+  background-color: hsla(0, 0%, 100%, 0.06);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 0.4rem;
+  pointer-events: none;
+}
+@media (min-width: 52.5em) {
+  .rider-hero__current-season-stats-container {
+    min-width: 34.2rem;
+  }
+}
+.rider-hero__current-season-stats-container {
+  position: relative;
+  background-color: #171c21;
+  border-radius: 0.4rem;
+  padding: 1.2rem 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 100%;
+}
+
+.rider-hero__current-season-stats-stat:first-of-type {
+  border-right: 0.05rem solid #33383e;
+}
+.rider-hero__current-season-stats-stat {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  gap: 0.8rem;
+  color: #dadbe0;
+  text-align: center;
+  min-height: 7.8rem;
+  padding: 0 1.6rem;
+}
+
+@media (min-width: 52.5em) {
+  .rider-hero__current-season-stats-title {
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+      sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.4rem;
+    color: #fff;
+    text-transform: uppercase;
+  }
+}
+
+@media (min-width: 52.5em) {
+  .rider-hero__current-season-stats-value {
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+      sans-serif;
+    font-size: 4rem;
+    line-height: 1;
+    color: #fff;
+  }
+}
+
+.rider-hero__current-season-stats-stat:last-of-type {
+  border-left: 0.05rem solid #33383e;
+}
+
+.rider-hero__results-and-standings-button {
+  margin: 2rem 0;
+  width: fit-content;
+}
+.rider-hero__results-and-standings-button {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.4rem;
+  letter-spacing: 0.2em;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  gap: 1.3rem;
+}
+
+.rider-hero__results-and-standings-button .fa-regular {
+  font-weight: 900;
+}
+
+.rider-hero__teammate-container::before {
+  content: "";
+  background-color: hsla(0, 0%, 100%, 0.06);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 0.4rem;
+  pointer-events: none;
+}
+.rider-hero__teammate-container {
+  position: relative;
+  background-color: #171c21;
+  border-radius: 0.4rem;
+  width: 100%;
+}
+
+.rider-hero__teammate-profile {
+  display: flex;
+  text-decoration: none;
+}
+
+.rider-hero__teammate {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 1.2rem;
+  flex: 1;
+}
+
+.rider-hero__teammate-image-container::before {
+  content: "";
+  background-color: hsla(0, 0%, 100%, 0.12);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+.rider-hero__teammate-image-container {
+  position: relative;
+  width: 4.8rem;
+  height: 4.8rem;
+  background-color: #171c21;
+  border-radius: 0.4rem;
+  overflow: hidden;
+}
+
+.rider-hero__teammate-image-container .rider-image-container {
+  position: relative;
+  width: 100%;
+  margin-top: 0;
+}
+
+.rider-hero__teammate-image-container .rider-image {
+  position: relative;
+  width: 18rem;
+  height: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.rider-hero__teammate-image-container .rider-image img {
+  width: 100%;
+}
+
+.rider-hero__teammate-details {
+  display: flex;
+  flex-flow: column;
+  flex: 1;
+}
+
+@media (min-width: 52.5em) {
+  .rider-hero__teammate-title {
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+  }
+}
+.rider-hero__teammate-title {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  text-transform: uppercase;
+  color: #9fa0a4;
+  flex: 1;
+}
+
+.rider-hero__teammate-name {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-weight: bold;
+  font-size: 2rem;
+  line-height: 2.4rem;
+  color: #fff;
+  flex: 1;
+}
+
+.rider-hero__teammate .fa-regular {
+  font-weight: 900;
+}
+
+@media (min-width: 52.5em) {
+  .rider-stats {
+    padding: 4.8rem 4.8rem 2.4rem;
+  }
+}
+.rider-stats {
+  position: relative;
+}
+
+.rider-stats__header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  margin-bottom: 1.8rem;
+  padding: 0 1.6rem;
+}
+
+@media (min-width: 52.5em) {
+  .rider-stats .widget-header {
+    width: auto;
+  }
+}
+.rider-stats .widget-header {
+  margin-right: 1.8rem;
+  margin-bottom: 0;
+  padding: 0;
+}
+
+@media (min-width: 52.5em) {
+  .rider-stats__menu-container {
+    padding: 0;
+  }
+}
+.rider-stats__menu-container {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.6rem;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.rider-stats__menu-button.active {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-weight: bold;
+  background-color: #c80502;
+  border: none;
+  color: #fff;
+}
+.rider-stats__menu-button:first-of-type {
+  text-transform: uppercase;
+}
+.rider-stats__menu-button {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 1.4rem;
+  line-height: 1.3rem;
+  border: 0.1rem solid #ebebeb;
+  border-radius: 1.8rem;
+  outline: none;
+  color: #000;
+  padding: 1rem 1.6rem;
+  white-space: nowrap;
+}
+
+@media (min-width: 52.5em) {
+  .rider-stats__stats-container--tablet {
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 0.4rem;
+    padding: 0;
+    width: 100%;
+  }
+}
+.rider-stats__stats-container {
+  left: 50%;
+  position: relative;
+  transform: translateX(-50%);
+  filter: drop-shadow(0.2rem 0.1rem 0.8rem rgba(0, 0, 0, 0.05));
+}
+
+@media (min-width: 52.5em) {
+  .rider-stats__stats-stat {
+    background-color: #fff;
+    border: none;
+    border-radius: 0.4rem;
+    gap: 1rem;
+    min-height: 15.4rem;
+    padding: 2.4rem 1rem 3.2rem;
+  }
+}
+.rider-stats__stats-stat {
+  display: flex;
+  flex-flow: column nowrap;
+  flex: 1;
+  justify-content: center;
+}
+
+@media (min-width: 52.5em) {
+  .rider-stats__stats-stat-title {
+    font-size: 1.6rem;
+    line-height: 1;
+  }
+}
+.rider-stats__stats-stat-title {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  color: #9fa0a4;
+  letter-spacing: -0.02em;
+}
+.rider-stats__stats-stat-title {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+@media (min-width: 52.5em) {
+  .rider-stats__stats-stat-value {
+    font-size: 7.2rem;
+  }
+}
+.rider-stats__stats-stat-value {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-weight: bold;
+  line-height: 1;
+}
+.rider-stats__stats-stat-value {
+  text-align: center;
+  text-transform: uppercase;
+}
