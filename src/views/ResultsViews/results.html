@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="/src/public/images/moto-gp.png" type="image/png">
+    <link rel="stylesheet" href="../../public/css/main.css" />
+    <link rel="stylesheet" href="../../public/css/result-standing.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Results</title>
+</head>
+
+<body>
+<!-- <script src="../mainnavbar.js"></script> -->
+<header class="main-nav"></header>
+<script src="header.js"></script>
+
+    <div class="tabs-header">
+        <nav class="tabs widget-outer-spacing">
+            <ul class="tabs__list tabs__list--center">
+                <li class="tabs__item">
+                    <a class="tabs__link is-active" href="./results.html">
+                        <span class="tabs__link-text"> Results </span>
+                    </a>
+                </li>
+                <li class="tabs__item">
+                    <a class="tabs__link" href="../StandingViews/standing.html">
+                        <span class="tabs__link-text"> Standings </span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <!--main filter-->
+    <div class="primary-filter">
+        <div class="primary-filter__filter-container">
+            <div class="primary-filter__filter-label">Year</div>
+            <select class="primary-filter__filter-select primary-filter__filter-select--year">
+                <!-- Options for year will be added dynamically from JavaScript -->
+            </select>
+        </div>
+
+        <div class="primary-filter__filter-container">
+            <div class="primary-filter__filter-label">Type</div>
+            <select class="primary-filter__filter-select primary-filter__filter-select--type">
+                <!-- Options for type will be added dynamically from JavaScript -->
+            </select>
+        </div>
+
+        <div class="primary-filter__filter-container">
+            <div class="primary-filter__filter-label">Event</div>
+            <select class="primary-filter__filter-select primary-filter__filter-select--event">
+                <!-- Options for event will be added dynamically from JavaScript -->
+            </select>
+        </div>
+
+        <div class="primary-filter__filter-container">
+            <div class="primary-filter__filter-label">Category</div>
+            <select class="primary-filter__filter-select primary-filter__filter-select--cat">
+                <!-- Options for category will be added dynamically from JavaScript -->
+            </select>
+        </div>
+
+        <div class="primary-filter__filter-container">
+            <div class="primary-filter__filter-label">Session</div>
+            <select class="primary-filter__filter-select primary-filter__filter-select--session">
+                <!-- Options for session will be added dynamically from JavaScript -->
+            </select>
+        </div>
+    </div>
+    <!--IMG-->
+    <div class="results__hero-container">
+        <div class="results__hero-image">
+            <img alt="Gran Premio Red Bull di San Marino e della Riviera di Rimini"
+                src="https://photos.motogp.com/2024/events/background/JPN.jpg"
+                class="results__hero-image-img js-hero-image active" />
+        </div>
+        <div class="results__hero-text">
+            MotoGP™ Results 2024
+        </div>
+    </div>
+    </div>
+    <!-- main content-->
+    <section class="results-table">
+        <div class="results-table__weather">
+            <div class="results-table__weather-column">
+                <i class="fa-solid fa-cloud-rain icon results-table__weather-icon" style="width: 100%"></i>
+            </div>
+            <div class="results-table__weather-column">
+                <span class="results-table__weather-header results-table__weather-header--cell">Light Rain</span>
+                <span class="results-table__weather-cell">30º</span>
+            </div>
+            <div class="results-table__weather-column">
+                <span class="results-table__weather-header">Track conditions</span>
+                <span class="results-table__weather-cell">Dry</span>
+            </div>
+            <div class="results-table__weather-column">
+                <span class="results-table__weather-header">Humidity</span>
+                <span class="results-table__weather-cell">51%</span>
+            </div>
+            <div class="results-table__weather-column">
+                <span class="results-table__weather-header">Ground</span>
+                <span class="results-table__weather-cell">30º</span>
+            </div>
+        </div>
+        <div class="results-table__table-wrapper">
+            <table class="results-table__table">
+                <thead>
+                    <tr>
+                        <th class="results-table__header-cell results-table__header-cell--pos u-hide-tablet">
+                            pos.
+                        </th>
+                        <th class="results-table__header-cell results-table__header-cell--points u-hide-tablet">
+                            pts
+                        </th>
+                        <th class="results-table__header-cell results-table__header-cell--rider">
+                            rider
+                        </th>
+                        <th class="results-table__header-cell results-table__header-cell--team u-hide-tablet">
+                            Team
+                        </th>
+                        <th class="results-table__header-cell results-table__header-cell--time">
+                            time / gap
+                        </th>
+                    </tr>
+                </thead>
+                <tbody id="resultList"></tbody>
+            </table>
+        </div>
+    </section>
+
+
+    <script src="results.js"></script>
+</body>
+
+</html>

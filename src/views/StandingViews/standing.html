@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="/src/public/images/moto-gp.png" type="image/png" />
+    <link rel="stylesheet" href="../../public/css/main.css" />
+    <link rel="stylesheet" href="../../public/css/result-standing.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Standings</title>
+  </head>
+
+  <body>
+    <!-- <script src="../mainnavbar.js"></script> -->
+    <header class="main-nav"></header>
+    <script src="header.js"></script>
+    <!--navbar phu-->
+    <div class="tabs-header">
+      <nav class="tabs widget-outer-spacing">
+        <ul class="tabs__list tabs__list--center">
+          <li class="tabs__item">
+            <a class="tabs__link" href="/src/views/ResultsViews/results.html">
+              <span class="tabs__link-text"> Results </span>
+            </a>
+          </li>
+          <li class="tabs__item">
+            <a
+              class="tabs__link is-active"
+              href="/src/views/StandingViews/standing.html"
+            >
+              <span class="tabs__link-text"> Standings </span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <!--main content-->
+    <div class="standings__container">
+      <div class="primary-filter">
+        <div class="primary-filter__filter-container">
+          <div class="primary-filter__filter-label">Year</div>
+          <select
+            class="primary-filter__filter-select primary-filter__filter-select--year"
+          >
+            <option value="2024">2024</option>
+            <option value="2023">2023</option>
+          </select>
+        </div>
+        <div class="primary-filter__filter-container">
+          <div class="primary-filter__filter-label">Championship</div>
+          <select
+            class="primary-filter__filter-select primary-filter__filter-select--championship"
+          >
+            <option value="championship-standings">Riders' Championship</option>
+            <option value="team-standings">Teams' Championship</option>
+          </select>
+        </div>
+      </div>
+      <div class="standings__hero-container">
+        <div class="standings__hero-image">
+          <div class="standings-image-container">
+            <div class="standings-image">
+              <div class="u-observed lazy-image-wrapper">
+                <picture class="object-fit-cover-picture">
+                  <source
+                    srcset="
+                      https://resources.motogp.pulselive.com/photo-resources/2023/06/23/c094c164-18eb-42cc-9d8c-4626a857ff41/riders-championship-hero.jpg?height=300&width=425 1x,
+                      https://resources.motogp.pulselive.com/photo-resources/2023/06/23/c094c164-18eb-42cc-9d8c-4626a857ff41/riders-championship-hero.jpg?height=600&width=850 2x
+                    "
+                    media="(max-width: 425px)"
+                  />
+                  <source
+                    srcset="
+                      https://resources.motogp.pulselive.com/photo-resources/2023/06/23/c094c164-18eb-42cc-9d8c-4626a857ff41/riders-championship-hero.jpg?height=300&width=768  1x,
+                      https://resources.motogp.pulselive.com/photo-resources/2023/06/23/c094c164-18eb-42cc-9d8c-4626a857ff41/riders-championship-hero.jpg?height=600&width=1536 2x
+                    "
+                    media="(max-width: 768px)"
+                  />
+                  <source
+                    srcset="
+                      https://resources.motogp.pulselive.com/photo-resources/2023/06/23/c094c164-18eb-42cc-9d8c-4626a857ff41/riders-championship-hero.jpg?height=300&width=1440 1x,
+                      https://resources.motogp.pulselive.com/photo-resources/2023/06/23/c094c164-18eb-42cc-9d8c-4626a857ff41/riders-championship-hero.jpg?height=600&width=2880 2x
+                    "
+                    media="(max-width: 1440px)"
+                  />
+                  <img
+                    src="https://resources.motogp.pulselive.com/photo-resources/2023/06/23/c094c164-18eb-42cc-9d8c-4626a857ff41/riders-championship-hero.jpg?height=300&width=1440"
+                    alt="riders-championship-hero"
+                    loading="lazy"
+                    class="img undefined picture__img object-fit-cover-picture__img"
+                  />
+                </picture>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="standings__hero-text">MotoGP™ Standings 2024</div>
+      </div>
+    </div>
+    <div class="standings-table__table-wrapper">
+      <div class="primary-filter secondary-filter">
+        <div
+          class="primary-filter__filter-container"
+          style="background-color: #f5f5f5"
+        >
+          <div class="primary-filter__filter-label">Category</div>
+          <select
+            class="primary-filter__filter-select primary-filter__filter-select--cat"
+          >
+            <option value="MotoGP™">MotoGP™</option>
+            <option value="Moto2™">Moto2™</option>
+            <option value="Moto3™">Moto3™</option>
+            <option value="MotoE™">MotoE™</option>
+          </select>
+        </div>
+      </div>
+      <div>
+        <div>
+          <table
+            id="riderStandings"
+            class="standings-table__table"
+            style="display: none"
+          >
+            <thead>
+              <tr>
+                <th
+                  class="standings-table__header-cell standings-table__header-cell--pos"
+                >
+                  pos.
+                </th>
+                <th
+                  class="standings-table__header-cell standings-table__header-cell--rider u-hide-tablet"
+                >
+                  rider
+                </th>
+                <th
+                  class="standings-table__header-cell standings-table__header-cell--team u-hide-tablet"
+                >
+                  Team
+                </th>
+                <th
+                  class="standings-table__header-cell standings-table__header-cell--points u-hide-phablet"
+                >
+                  points
+                </th>
+              </tr>
+            </thead>
+            <tbody id="riderStandingList">
+              <!-- Nội dung sẽ được thêm vào đây -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div>
+        <div>
+          <table
+            id="teamStandings"
+            class="standings-table__table"
+            style="display: none"
+          >
+            <thead>
+              <tr>
+                <th
+                  class="standings-table__header-cell standings-table__header-cell--pos"
+                >
+                  pos.
+                </th>
+                <th
+                  class="standings-table__header-cell standings-table__header-cell--team"
+                >
+                  Team
+                </th>
+                <th
+                  class="standings-table__header-cell standings-table__header-cell--points"
+                >
+                  points
+                </th>
+              </tr>
+            </thead>
+            <tbody id="teamStandingList">
+              <!-- Nội dung sẽ được thêm vào đây -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+      <div class="footer__container">
+        <div class="footer__logo-container">
+          <a class="footer__logo"></a>
+        </div>
+        <section class="footer-sponsors">
+          <div class="footer-sponsors__container">
+            <div class="footer-sponsors__title">Official Sponsors</div>
+            <div class="footer-sponsors__list">
+              <a class="footer-sponsors__sponsor">
+                <img
+                  src="https://resources.motogp.pulselive.com/photo-resources/2024/05/09/74b76695-1cf4-4776-8a3a-e5e28a32b484/sponsor-qatar.png?width=100"
+                  alt="Sponsor Qatar"
+                />
+              </a>
+              <a class="footer-sponsors__sponsor">
+                <img
+                  src="https://resources.motogp.pulselive.com/photo-resources/2024/09/12/179ab216-720b-4b7c-bc32-c7579a8b1cc2/Tissot_Main_Sponsor.png?width=100"
+                  alt="Tissot Main Sponsor"
+                />
+              </a>
+              <a class="footer-sponsors__sponsor">
+                <img
+                  src="https://resources.motogp.pulselive.com/photo-resources/2023/03/27/6499fb7c-58c7-4e12-b107-98156ed85931/MICHELIN_logo.png?width=100"
+                  alt="Michelin Logo"
+                />
+              </a>
+              <a class="footer-sponsors__sponsor">
+                <img
+                  src="https://resources.motogp.pulselive.com/photo-resources/2023/10/25/f0612155-0f76-452f-9db8-348c37fdd01b/BMW-M_logo.png?width=100"
+                  alt="BMW M Logo"
+                />
+              </a>
+              <a class="footer-sponsors__sponsor">
+                <img
+                  src="https://resources.motogp.pulselive.com/photo-resources/2023/04/17/8a22cccc-b9e4-4b80-8a78-da85a042adf2/EstrellaGalicia_Logo.png?width=100"
+                  alt="Estrella Galicia Logo"
+                />
+              </a>
+            </div>
+          </div>
+        </section>
+      </div>
+    </footer>
+    <script src="standing.js"></script>
+  </body>
+</html>

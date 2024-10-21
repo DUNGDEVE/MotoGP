@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="/src/public/images/moto-gp.png" type="image/png" />
+    <link rel="stylesheet" href="../../public/css/main.css" />
+    <link rel="stylesheet" href="../../public/css/calender.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Calendar</title>
+  </head>
+
+  <body>
+    <!-- <script src="../mainnavbar.js"></script> -->
+    <header class="main-nav"></header>
+    <script src="header.js"></script>
+
+    <header class="calendar">
+      <div class="calendar__container">
+        <div class="calendar__header-container">
+          <div class="calendar__title-container">
+            <h1 class="calendar__title">2024 Calendar</h1>
+          </div>
+          <div class="calendar__sponsor-container"></div>
+        </div>
+        <div class="calendar__submenu-container">
+          <ul class="calendar__submenu-list">
+            <li class="calendar__submenu-item tickets">
+              <a
+                class="calendar__submenu-link external-link tickets"
+                href="https://tickets.motogp.com/en/?utm_source=motogp.com&utm_medium=onpage&utm_campaign=ticketing&utm_content=calendar&_gl=1*mmbof2*_gcl_au*MTMyNjY2MTczLjE3Mjg1Mjg4MDU.*_ga*MTI0MjQzMTM3MS4xNzI4NTI4ODA1*_ga_0204YNR4C1*MTcyODUzMjc2NS4yLjEuMTcyODUzMjkxNi41OC4wLjA.&_ga=2.258420618.1604740506.1728528805-1242431371.1728528805"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <!-- Icon Ticket -->
+                <i class="fa-solid fa-ticket fa-2x">Tickets</i>
+                <svg class="arrow">
+                  <i class="fa-solid fa-play"></i>
+                </svg>
+              </a>
+            </li>
+            <li class="calendar__submenu-item hospitality">
+              <a
+                class="calendar__submenu-link external-link tickets"
+                href="https://motogppremier.motogp.com/hospitality?utm_source=motogp.com&utm_medium=partner_referral&utm_campaign=motogp_web_calendar_hospitality&_gl=1*1cgnzko*_gcl_au*MTMyNjY2MTczLjE3Mjg1Mjg4MDU.*_ga*MTI0MjQzMTM3MS4xNzI4NTI4ODA1*_ga_0204YNR4C1*MTcyODUzMjc2NS4yLjEuMTcyODUzMzk3MS41OS4wLjA.&_ga=2.255209352.1604740506.1728528805-1242431371.1728528805"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i class="fa-solid fa-flag-checkered fa-2x">Hospitality</i>
+                <!-- Sử dụng class để tăng kích thước -->
+                <svg class="arrow">
+                  <i class="fa-solid fa-play"></i>
+                </svg>
+              </a>
+            </li>
+            <li class="calendar__featured-cta">
+              <a
+                class="calendar__featured-cta-link calendar__featured-cta-link--one"
+              >
+                <i class="fa-regular fa-calendar" style="color: #ffffff"></i>
+
+                Next GP
+              </a>
+            </li>
+            <li class="calendar__featured-cta">
+              <a
+                class="calendar__featured-cta-link calendar__featured-cta-link--two"
+              >
+                <i
+                  class="fa-solid fa-cloud-arrow-down"
+                  style="color: #ffffff"
+                ></i>
+                Calendar Download</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <div class="default-template">
+        <div class="calendar-listings__container">
+          <div class="calendar-listings__event-toggle">
+            <button
+              class="calendar-listings__event-toggle-btn active-btn"
+              onclick="showCalendar('GrandPrix', this)"
+            >
+              Grands Prix
+            </button>
+            <button
+              class="calendar-listings__event-toggle-btn"
+              onclick="showCalendar('AllEvents', this)"
+            >
+              All Events
+            </button>
+          </div>
+          <div style="margin-left: 5.8rem">
+            <div class="wrap-calendar">
+              <div id="GrandPrix" class="calendar-section active"></div>
+              <div id="AllEvents" class="calendar-section"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer__container">
+        <div class="footer__logo-container">
+          <a class="footer__logo"></a>
+        </div>
+        <section class="footer-sponsors">
+          <div class="footer-sponsors__container">
+            <div class="footer-sponsors__title">Official Sponsors</div>
+            <div class="footer-sponsors__list">
+              <a class="footer-sponsors__sponsor">
+                <div
+                  class="js-lazy-load u-observed lazy-image-wrapper is-loaded"
+                >
+                  <picture class="picture">
+                    <source
+                      class=""
+                      srcset="
+                        https://resources.motogp.pulselive.com/photo-resources/2024/05/09/74b76695-1cf4-4776-8a3a-e5e28a32b484/sponsor-qatar.png?width=100,
+                        https://resources.motogp.pulselive.com/photo-resources/2024/05/09/74b76695-1cf4-4776-8a3a-e5e28a32b484/sponsor-qatar.png?width=200 2x
+                      "
+                      media="(min-width: 0px)"
+                    />
+                    <img
+                      class="js-faded-image fade-in-on-load picture__img is-loaded"
+                      src="https://resources.motogp.pulselive.com/photo-resources/2024/05/09/74b76695-1cf4-4776-8a3a-e5e28a32b484/sponsor-qatar.png?width=100"
+                      alt="sponsor-qatar"
+                    />
+                  </picture>
+                </div>
+              </a>
+
+              <a class="footer-sponsors__sponsor">
+                <div
+                  class="js-lazy-load u-observed lazy-image-wrapper is-loaded"
+                >
+                  <picture class="picture">
+                    <source
+                      class=""
+                      srcset="
+                        https://resources.motogp.pulselive.com/photo-resources/2024/09/12/179ab216-720b-4b7c-bc32-c7579a8b1cc2/Tissot_Main_Sponsor.png?width=100,
+                        https://resources.motogp.pulselive.com/photo-resources/2024/09/12/179ab216-720b-4b7c-bc32-c7579a8b1cc2/Tissot_Main_Sponsor.png?width=200 2x
+                      "
+                      media="(min-width: 0px)"
+                    />
+                    <img
+                      class="js-faded-image fade-in-on-load picture__img is-loaded"
+                      src="https://resources.motogp.pulselive.com/photo-resources/2024/09/12/179ab216-720b-4b7c-bc32-c7579a8b1cc2/Tissot_Main_Sponsor.png?width=100"
+                      alt="Tissot_Main_Sponsor"
+                    />
+                  </picture>
+                </div>
+              </a>
+
+              <a class="footer-sponsors__sponsor">
+                <div
+                  class="js-lazy-load u-observed lazy-image-wrapper is-loaded"
+                >
+                  <picture class="picture">
+                    <source
+                      class=""
+                      srcset="
+                        https://resources.motogp.pulselive.com/photo-resources/2023/03/27/6499fb7c-58c7-4e12-b107-98156ed85931/MICHELIN_logo.png?width=100,
+                        https://resources.motogp.pulselive.com/photo-resources/2023/03/27/6499fb7c-58c7-4e12-b107-98156ed85931/MICHELIN_logo.png?width=200 2x
+                      "
+                      media="(min-width: 0px)"
+                    />
+                    <img
+                      class="js-faded-image fade-in-on-load picture__img is-loaded"
+                      src="https://resources.motogp.pulselive.com/photo-resources/2023/03/27/6499fb7c-58c7-4e12-b107-98156ed85931/MICHELIN_logo.png?width=100"
+                      alt="MICHELIN_logo"
+                    />
+                  </picture>
+                </div>
+              </a>
+
+              <a class="footer-sponsors__sponsor">
+                <div
+                  class="js-lazy-load u-observed lazy-image-wrapper is-loaded"
+                >
+                  <picture class="picture">
+                    <source
+                      class=""
+                      srcset="
+                        https://resources.motogp.pulselive.com/photo-resources/2023/10/25/f0612155-0f76-452f-9db8-348c37fdd01b/BMW-M_logo.png?width=100,
+                        https://resources.motogp.pulselive.com/photo-resources/2023/10/25/f0612155-0f76-452f-9db8-348c37fdd01b/BMW-M_logo.png?width=200 2x
+                      "
+                      media="(min-width: 0px)"
+                    />
+                    <img
+                      class="js-faded-image fade-in-on-load picture__img is-loaded"
+                      src="https://resources.motogp.pulselive.com/photo-resources/2023/10/25/f0612155-0f76-452f-9db8-348c37fdd01b/BMW-M_logo.png?width=100"
+                      alt="BMW-M_logo"
+                    />
+                  </picture>
+                </div>
+              </a>
+
+              <a class="footer-sponsors__sponsor">
+                <div
+                  class="js-lazy-load u-observed lazy-image-wrapper is-loaded"
+                >
+                  <picture class="picture">
+                    <source
+                      class=""
+                      srcset="
+                        https://resources.motogp.pulselive.com/photo-resources/2023/04/17/8a22cccc-b9e4-4b80-8a78-da85a042adf2/EstrellaGalicia_Logo.png?width=100,
+                        https://resources.motogp.pulselive.com/photo-resources/2023/04/17/8a22cccc-b9e4-4b80-8a78-da85a042adf2/EstrellaGalicia_Logo.png?width=200 2x
+                      "
+                      media="(min-width: 0px)"
+                    />
+                    <img
+                      class="js-faded-image fade-in-on-load picture__img is-loaded"
+                      src="https://resources.motogp.pulselive.com/photo-resources/2023/04/17/8a22cccc-b9e4-4b80-8a78-da85a042adf2/EstrellaGalicia_Logo.png?width=100"
+                      alt="EstrellaGalicia_Logo"
+                    />
+                  </picture>
+                </div>
+              </a>
+
+              <a class="footer-sponsors__sponsor">
+                <div
+                  class="js-lazy-load u-observed lazy-image-wrapper is-loaded"
+                >
+                  <picture class="picture">
+                    <source
+                      class=""
+                      srcset="
+                        https://resources.motogp.pulselive.com/photo-resources/2023/03/27/ef2af200-beec-45b5-bfac-0e9b453ad4ed/DHL_logo.png?width=100,
+                        https://resources.motogp.pulselive.com/photo-resources/2023/03/27/ef2af200-beec-45b5-bfac-0e9b453ad4ed/DHL_logo.png?width=200 2x
+                      "
+                      media="(min-width: 0px)"
+                    />
+                    <img
+                      class="js-faded-image fade-in-on-load picture__img is-loaded"
+                      src="https://resources.motogp.pulselive.com/photo-resources/2023/03/27/ef2af200-beec-45b5-bfac-0e9b453ad4ed/DHL_logo.png?width=100"
+                      alt="DHL_logo"
+                    />
+                  </picture>
+                </div>
+              </a>
+            </div>
+          </div>
+        </section>
+        <div class="footer__menu-container">
+          <div class="footer__menu-section">
+            <div class="footer__menu-title">Media & Commercial</div>
+            <ul class="footer__menu-list">
+              <li class="footer__menu-item">
+                <a class="footer__menu-link"> Official Sponsors </a>
+              </li>
+
+              <li class="footer__menu-item">
+                <a class="footer__menu-link"> TV Broadcast </a>
+              </li>
+
+              <li class="footer__menu-item">
+                <a class="footer__menu-link"> MotoGP™ Apps </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer__menu-section">
+            <div class="footer__menu-title">Help</div>
+            <ul class="footer__menu-list">
+              <li class="footer__menu-item">
+                <a class="footer__menu-link"> Contact us </a>
+              </li>
+
+              <li class="footer__menu-item">
+                <a class="footer__menu-link">FAQ </a>
+              </li>
+
+              <li class="footer__menu-item">
+                <a class="footer__menu-link"> Join MotoGP™ </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer__menu-section">
+            <div class="footer__menu-title">Tickets & Hospitality</div>
+            <ul class="footer__menu-list">
+              <li class="footer__menu-item">
+                <a class="footer__menu-link"> Tickets</a>
+              </li>
+
+              <li class="footer__menu-item">
+                <a class="footer__menu-link"> Hospitality </a>
+              </li>
+
+              <li class="footer__menu-item">
+                <a class="footer__menu-link"> Experiences </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer__menu-section">
+            <div class="footer__menu-title">Game Hub</div>
+            <ul class="footer__menu-list">
+              <li class="footer__menu-item">
+                <a class="footer__menu-link"> MotoGP™ Fantasy </a>
+              </li>
+
+              <li class="footer__menu-item">
+                <a class="footer__menu-link"> MotoGP™ Predictor </a>
+              </li>
+
+              <li class="footer__menu-item">
+                <a class="footer__menu-link"> MotoGP™ eSport </a>
+              </li>
+
+              <li class="footer__menu-item">
+                <a class="footer__menu-link"> MotoGP™ Guru </a>
+              </li>
+
+              <li class="footer__menu-item">
+                <a class="footer__menu-link"> MotoGP™24 </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer__menu-section">
+            <div class="footer__menu-title">About Us</div>
+            <ul class="footer__menu-list">
+              <li class="footer__menu-item">
+                <a class="footer__menu-link"> Dorna Sports </a>
+              </li>
+
+              <li class="footer__menu-item">
+                <a class="footer__menu-link"> Cookie Policy </a>
+              </li>
+
+              <li class="footer__menu-item">
+                <a class="footer__menu-link"> Legal Notice </a>
+              </li>
+
+              <li class="footer__menu-item">
+                <a class="footer__menu-link"> Privacy Policy </a>
+              </li>
+
+              <li class="footer__menu-item">
+                <a class="footer__menu-link"> Purchase Policy </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer__copyright">© 2024 nhom 3</div>
+      </div>
+    </footer>
+    <script src="calendar.js" defer></script>
+  </body>
+</html>

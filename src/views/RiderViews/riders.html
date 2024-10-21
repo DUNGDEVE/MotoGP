@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="/src/public/images/moto-gp.png" type="image/png">
+    <link rel="stylesheet" href="../../public/css/main.css" />
+    <link rel="stylesheet" href="../../public/css/rider-team.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Riders - MotoGP™</title>
+</head>
+
+<body>
+    <!-- Main nav -->
+    <script src="../mainnavbar.js"></script>
+
+    <!-- In ra danh sách -->
+    <div class="tabs-header">
+        <nav class="tabs widget-outer-spacing">
+            <ul class="tabs__list tabs__list--center">
+                <li class="tabs__item">
+                    <a class="tabs__link is-active" href="/src/views/RiderViews/riders.html">
+                        <span class="tabs__link-text">Riders</span>
+                    </a>
+                </li>
+                <li class="tabs__item">
+                    <a class="tabs__link" href="/src/views/TeamViews/teams.html">
+                        <span class="tabs__link-text">Teams</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- Main -->
+    <div id="team" class="teams-grid__container active">
+        <div class="teams-grid__title">Riders</div>
+        <!-- Type -->
+        <div class="rider-grid__menu-container">
+            <button class="rider-grid__menu-item active-rider-btn" onclick="showTeam('moto1', this)">
+                MotoGP™
+            </button>
+            <button class="rider-grid__menu-item" onclick="showTeam('moto2', this)">
+                Moto2™
+            </button>
+            <button class="rider-grid__menu-item" onclick="showTeam('moto3', this)">
+                Moto3™
+            </button>
+            <button class="rider-grid__menu-item" onclick="showTeam('motoe', this)">
+                MotoE™
+            </button>
+        </div>
+        <!-- Riders List -->
+        <div id="team-moto1" class="teams-grid__motogp active-rider">
+            <div id="teamList" class="teams-list__container">
+                <!-- Nội dung danh sách của bạn ở đây -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer__container">
+            <div class="footer__logo-container">
+                <a class="footer__logo"></a>
+            </div>
+            <section class="footer-sponsors">
+                <div class="footer-sponsors__container">
+                    <div class="footer-sponsors__title">Official Sponsors</div>
+                    <div class="footer-sponsors__list">
+                        <a class="footer-sponsors__sponsor">
+                            <img src="https://resources.motogp.pulselive.com/photo-resources/2024/05/09/74b76695-1cf4-4776-8a3a-e5e28a32b484/sponsor-qatar.png?width=100"
+                                alt="Sponsor Qatar" />
+                        </a>
+                        <a class="footer-sponsors__sponsor">
+                            <img src="https://resources.motogp.pulselive.com/photo-resources/2024/09/12/179ab216-720b-4b7c-bc32-c7579a8b1cc2/Tissot_Main_Sponsor.png?width=100"
+                                alt="Tissot Main Sponsor" />
+                        </a>
+                        <a class="footer-sponsors__sponsor">
+                            <img src="https://resources.motogp.pulselive.com/photo-resources/2023/03/27/6499fb7c-58c7-4e12-b107-98156ed85931/MICHELIN_logo.png?width=100"
+                                alt="Michelin Logo" />
+                        </a>
+                        <a class="footer-sponsors__sponsor">
+                            <img src="https://resources.motogp.pulselive.com/photo-resources/2023/10/25/f0612155-0f76-452f-9db8-348c37fdd01b/BMW-M_logo.png?width=100"
+                                alt="BMW M Logo" />
+                        </a>
+                        <a class="footer-sponsors__sponsor">
+                            <img src="https://resources.motogp.pulselive.com/photo-resources/2023/04/17/8a22cccc-b9e4-4b80-8a78-da85a042adf2/EstrellaGalicia_Logo.png?width=100"
+                                alt="Estrella Galicia Logo" />
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </footer>
+    <script src="rider.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,25 @@
+.row div {
+  padding-top: 10px;
+}
+
+.nav-link {
+  cursor: pointer;
+}
+
+.flag,
+.image {
+  height: 36px;
+}
+
+.wrap-add-button {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 60px;
+}
+
+/* Chrome, Safari, Edge, Opera
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+} */

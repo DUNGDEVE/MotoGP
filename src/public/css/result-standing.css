@@ -1,0 +1,721 @@
+.results__container {
+  position: relative;
+  z-index: 1;
+}
+
+@media (min-width: 52.5em) {
+  .results__container .primary-filter {
+    padding: 0 4.8rem;
+  }
+}
+
+@media (min-width: 52.5em) {
+  .primary-filter {
+    flex-wrap: nowrap;
+  }
+}
+
+.primary-filter {
+  display: flex;
+  position: relative;
+  background-color: #000;
+  background-image: radial-gradient(96.8% 493.26% at 100% 93.41%,
+      rgba(254, 11, 7, 0.219) 0,
+      rgba(148, 4, 1, 0) 100%);
+  border-top: 0.05rem solid rgba(51, 56, 62, 0.5);
+  min-height: 5rem;
+}
+
+.primary-filter__filter-container:first-of-type {
+  border-right: 0.05rem solid rgba(51, 56, 62, 0.5);
+}
+
+@media (min-width: 52.5em) {
+  .primary-filter__filter-container {
+    min-height: 6.4rem;
+    border-right: 0.05rem solid rgba(51, 56, 62, 0.5);
+    border-bottom: 0.05rem solid rgba(51, 56, 62, 0.5);
+    border-left: 0.05rem solid rgba(51, 56, 62, 0.5);
+  }
+}
+
+.primary-filter__filter-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0 2rem 0 1.6rem;
+  position: relative;
+  width: 50%;
+}
+
+@media (min-width: 52.5em) {
+  .primary-filter__filter-label {
+    top: 1.6rem;
+  }
+}
+
+.primary-filter__filter-label {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 1.3rem;
+  line-height: 1.2rem;
+  letter-spacing: -0.02em;
+  color: #9fa0a4;
+  pointer-events: none;
+  position: absolute;
+}
+
+.primary-filter__filter-container select {
+  color: #fff;
+  background-color: transparent;
+  border: none;
+  width: 100%;
+  margin: 20px 0 0 0;
+  padding: 0.8rem 1.8rem 0 0;
+  background-image: url(https://www.motogp.com/resources/v7.7.1/i/svg-files/elements/filter-arrow-white.svg);
+  background-position: 100%;
+  background-size: auto;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-weight: 800;
+}
+
+.primary-filter__filter-container select option {
+  background-color: #000;
+}
+
+@media (min-width: 52.5em) {
+  .results__hero-container {
+    min-height: 20.8rem;
+  }
+}
+
+.results__hero-container {
+  display: flex;
+  flex-flow: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 100%;
+  height: auto;
+  position: relative;
+  background-color: #000;
+}
+
+@media (min-width: 52.5em) {
+  .results__hero-image::after {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    content: "";
+    display: block;
+    background: linear-gradient(90deg, #000 25%, transparent 80%);
+  }
+}
+
+.results__hero-image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+}
+
+.results__hero-image img.active {
+  opacity: 1;
+}
+
+.results__hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 75%;
+  transition: opacity 0.5s ease-in-out;
+  min-height: 11.8rem;
+}
+
+@media (min-width: 64.0625em) {
+  .results__hero-text {
+    font-size: 6.4rem;
+    line-height: 6.4rem;
+    width: 60%;
+  }
+}
+
+@media (min-width: 52.5em) {
+  .results__hero-text {
+    padding: 3.5rem 4.8rem 1.3rem;
+    height: 100%;
+    position: relative;
+  }
+}
+
+.results__hero-text {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-weight: bolder;
+  color: #fff;
+  left: 0;
+}
+
+.results-table {
+  margin: 4.8rem 4.8rem 2.4rem;
+}
+
+.results-table__weather {
+  display: flex;
+  background: #fff;
+  justify-content: flex-start;
+  padding: 1rem 0;
+}
+
+.results-table__weather-column:first-of-type {
+  margin: 0 -1.6rem 0 1.6rem;
+  justify-content: center;
+}
+
+.results-table__weather-column {
+  display: flex;
+  flex-direction: column;
+  margin-left: 2.4rem;
+}
+
+.results-table__weather-icon {
+  fill: #585e65;
+  font-size: 3em;
+}
+
+.results-table__weather-header--cell {
+  color: #585e65;
+}
+
+.results-table__weather-header {
+  font-size: 1.2rem;
+  font-weight: 700;
+  line-height: 1;
+  color: #9fa0a4;
+}
+
+.results-table__weather-cell {
+  font-size: 1.4rem;
+  line-height: 1.2;
+  color: #585e65;
+  font-weight: 700;
+}
+
+.results-table__table {
+  width: 100%;
+  table-layout: fixed;
+  background: #fff;
+}
+
+.results-table__header-cell--pos {
+  width: 8rem;
+}
+
+.results-table__header-cell--pos {
+  width: 8rem;
+}
+
+.results-table__header-cell {
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: #000;
+  text-align: left;
+  height: 2.4rem;
+  padding: 0 1rem 0 1.6rem;
+  letter-spacing: 0.025rem;
+  text-transform: capitalize;
+}
+
+.results-table__header-cell--points {
+  color: #9fa0a4;
+  width: 8rem;
+}
+
+.results-table__header-cell--rider {
+  text-align: center;
+  width: 40rem;
+}
+
+.results-table__header-cell--team {
+  color: #9fa0a4;
+}
+
+.results-table__header-cell--time {
+  text-align: right;
+  width: 10rem;
+}
+
+.results-table tbody {
+  border-top: 0.1rem solid #ededed;
+}
+
+.results-table__body-row {
+  height: 7rem;
+  border-bottom: 0.1rem solid #ededed;
+}
+
+.results-table__body-cell--pos {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  text-align: center;
+  font-size: 3.2rem;
+}
+
+.results-table__body-cell {
+  color: #171c21;
+  padding: 0 1rem 0 1.6rem;
+  position: relative;
+}
+
+.results-table__body-cell--points {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 3.2rem;
+  color: #9fa0a4;
+}
+
+.results-table__body-cell--rider {
+  padding: 0 1.6rem 0 0;
+}
+
+.results-table__rider-details {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.results-table__rider-details .rider-image-container {
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 7rem;
+  overflow: hidden;
+  width: 10rem;
+  position: relative;
+  margin-right: 5rem;
+}
+
+.results-table__rider-details .rider-image-container .picture__img {
+  min-width: 15.5rem;
+  margin-left: -3rem;
+}
+
+.rider-image img {
+  width: 100%;
+}
+
+.results-table__rider-name-wrapper {
+  width: 65%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-left: auto;
+}
+
+.results-table__rider-name {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  width: 100%;
+  text-align: left;
+}
+
+.results-table__body-cell--number {
+  font-weight: 700;
+  font-size: 2rem;
+  display: block;
+  min-width: 3.5rem;
+  padding: 0 1rem 0 0;
+  color: #9fa0a4;
+}
+
+.results-table__body-cell--full-name {
+  color: #181c21;
+  font-weight: 700;
+  font-size: 2rem;
+  display: block;
+  min-width: 3.5rem;
+  padding: 0 1rem 0 0;
+}
+
+.results-table__rider-link {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  color: inherit;
+  text-decoration: none;
+}
+
+.results-table__first-name {
+  font-weight: 200;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.results-table__body-cell-flag {
+  height: 1.8rem;
+  border: 0.1rem solid #ededed;
+  border-radius: 0.4rem;
+}
+
+.results-table__body-cell--team {
+  font-size: 1.6rem;
+  letter-spacing: 0.025rem;
+  color: #9fa0a4;
+  font-weight: 700;
+}
+
+.results-table__body-cell--time {
+  text-align: right;
+  font-weight: 700;
+  font-size: 1.6rem;
+}
+
+.gresini {
+  border-left: 4px solid rgb(157, 180, 217);
+}
+
+.ducati {
+  border-left: 4px solid rgb(204, 0, 0);
+}
+
+.red-bull {
+  border-left: 4px solid rgb(255, 102, 0);
+}
+
+.pertamina {
+  border-left: 4px solid rgb(219, 255, 3);
+}
+
+.monster {
+  border-left: 4px solid rgb(12, 54, 140);
+}
+
+.trackhouse {
+  border-left: 4px solid rgb(0, 102, 204);
+}
+
+.castrol,
+.idemitsu,
+.hrc {
+  border-left: 4px solid rgb(250, 250, 250);
+}
+
+.prima {
+  border-left: 4px solid rgb(130, 52, 194);
+}
+
+.aprilia {
+  border-left: 4px solid rgb(92, 179, 58);
+}
+
+.standings__container {
+  position: relative;
+  z-index: 1;
+}
+
+@media (min-width: 52.5em) {
+  .standings__container .primary-filter {
+    padding: 0 4.8rem;
+  }
+}
+
+@media (min-width: 52.5em) {
+  .standings__hero-container {
+    min-height: 20.8rem;
+  }
+}
+
+.standings__hero-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  position: relative;
+  background-color: #000;
+}
+
+@media (min-width: 52.5em) {
+  .standings__hero-image::after {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    content: "";
+    display: block;
+    background: linear-gradient(90deg, #000 25%, transparent 80%);
+  }
+}
+
+.standings__hero-image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.object-fit-cover-picture__img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  object-position: center;
+  font-family: "object-fit: cover; object-position: center";
+}
+
+@media (min-width: 52.5em) {
+  .standings__hero-text {
+    font-size: 6.4rem;
+    line-height: 6.4rem;
+    padding: 3.5rem 4.8rem 4.5rem;
+    width: 50%;
+    height: 100%;
+    position: relative;
+  }
+}
+
+.standings__hero-text {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-weight: bold;
+  color: #fff;
+  left: 0;
+}
+
+.standings-table__table-wrapper {
+  padding: 4.8rem 4.8rem 2.4rem;
+}
+
+.standings-table__table-wrapper .primary-filter {
+  width: 50%;
+}
+
+.primary-filter.secondary-filter {
+  padding: 0;
+  background: transparent;
+  border: none;
+}
+
+.primary-filter.secondary-filter .primary-filter__filter-container {
+  border: 0.5px solid #eee;
+  background: #fff;
+}
+
+.primary-filter.secondary-filter .primary-filter__filter-container select {
+  color: #161616;
+  font-weight: 800;
+  background-image: url(https://www.motogp.com/resources/v7.7.1/i/svg-files/elements/filter-arrow-black.svg);
+}
+
+.primary-filter.secondary-filter .primary-filter__filter-container select option {
+  background-color: #fff;
+}
+
+.standings-table__table {
+  width: 100%;
+  table-layout: fixed;
+  border-top: 0.1rem solid #ededed;
+  box-shadow: 0.2rem 0.1rem 2.6rem rgba(0, 0, 0, 0.05);
+  position: relative;
+  background: #fff;
+}
+
+.standings-table__table thead {
+  background: #fff;
+}
+
+.standings-table__table thead .standings-table__header-cell--pos {
+  width: 9rem;
+}
+
+.standings-table__table thead .standings-table__header-cell {
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: #000;
+  text-align: left;
+  height: 2.4rem;
+  padding: 0 3rem 0 1.6rem;
+  letter-spacing: 0.025rem;
+  text-transform: capitalize;
+}
+
+.standings-table__table thead .standings-table__header-cell--rider {
+  text-align: center;
+  width: 40rem;
+}
+
+.standings-table__table thead .standings-table__header-cell--team {
+  color: #9fa0a4;
+}
+
+.standings-table__table thead .standings-table__header-cell--points {
+  text-align: right;
+  width: 10.5rem;
+}
+
+.standings-table__position-gradient {
+  position: absolute;
+  width: 95.1%;
+  height: 7.1rem;
+  left: 5rem;
+  top: 59rem;
+}
+
+.standings-table__table tbody .standings-table__body-row {
+  height: 7rem;
+  border-bottom: 0.1rem solid #ededed;
+}
+
+.standings-table__table tbody .standings-table__body-row:first-of-type .standings-table__body-cell {
+  border-color: #171c21 !important;
+  color: #fff;
+  position: relative;
+}
+
+.standings-table__table tbody .standings-table__body-row .standings-table__body-cell--pos {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  text-align: center;
+  padding-right: 3rem;
+}
+
+.standings-table__table tbody .standings-table__body-row .standings-table__body-cell {
+  font-size: 3.2rem;
+  padding: 0 1rem;
+}
+
+.standings-table__table tbody .standings-table__body-row .standings-table__body-cell--rider {
+  padding: 0 1rem 0 0;
+}
+
+.standings-table__rider-details {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.standings-table__rider-details .rider-image-container {
+  height: 7rem;
+  overflow: hidden;
+  width: 15.5rem;
+  position: relative;
+  left: -2rem;
+  margin-left: -2rem;
+}
+
+.standings-table__rider-details .rider-image-container .picture__img {
+  min-width: 15.5rem;
+}
+
+.standings-table__rider-name-wrapper {
+  width: 66%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-left: auto;
+}
+
+.standings-table__rider-name {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  width: 100%;
+  text-align: left;
+}
+
+.standings-table__table tbody .standings-table__body-row:first-of-type .standings-table__body-cell {
+  border-color: #171c21 !important;
+  color: #575757;
+  position: relative;
+}
+
+.standings-table__table tbody .standings-table__body-row .standings-table__body-cell--number {
+  font-weight: 700;
+  font-size: 2rem;
+  display: block;
+  min-width: 3.5rem;
+  padding: 0 0.5rem 0 0;
+}
+
+.standings-table__table tbody .standings-table__body-row .standings-table__body-cell--full-name {
+  color: #181c21;
+  display: block;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-weight: bold;
+}
+
+.standings-table__table tbody .standings-table__body-row .standings-table__body-cell--full-name {
+  font-weight: 700;
+  font-size: 2rem;
+  min-width: 3.5rem;
+  padding: 0 0 0.5rem 0;
+}
+
+.standings-table__rider-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.standings-table__first-name {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-weight: 200;
+}
+
+.standings-table__table tbody .standings-table__body-cell-flag {
+  height: 1.8rem;
+  border: 0.1rem solid #ededed;
+  border-radius: 0.4rem;
+}
+
+.standings-table__table tbody .standings-table__body-row .standings-table__body-cell--team {
+  font-size: 1.6rem;
+  letter-spacing: 0.025rem;
+  font-weight: 700;
+}
+
+.standings-table__table tbody .standings-table__body-row:first-of-type .standings-table__body-cell--team {
+  white-space: nowrap;
+  color: #575757;
+}
+
+.standings-table__table tbody .standings-table__body-row .standings-table__body-cell {
+  padding: 0 1rem;
+}
+
+.standings-table__table tbody .standings-table__body-row:first-of-type .standings-table__body-cell--points {
+  font-size: 3.2rem;
+}
+
+.standings-table__table tbody .standings-table__body-row .standings-table__body-cell--points {
+  text-align: right;
+  font-weight: 700;
+}
+
+.faqs {
+  background: #fff;
+}
+
+@media (min-width: 52.5em) {
+  .faqs__container {
+    flex-flow: row wrap;
+    padding: 4.8rem;
+    column-gap: 4.8rem;
+  }
+}
+
+.faqs__container {
+  display: flex;
+  position: relative;
+}
+
+@media (min-width: 52.5em) {
+  .faqs__title {
+    font-size: 5.2rem;
+    line-height: 4.8rem;
+    flex: 0 0 100%;
+    margin-bottom: 4.8rem;
+  }
+}
+
+.faqs__title {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  color: #000;
+  font-weight: bold;
+}
